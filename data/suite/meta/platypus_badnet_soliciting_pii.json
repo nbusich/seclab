@@ -1,0 +1,461 @@
+{
+  "name": "platypus_badnet_soliciting_pii",
+  "clean": "platypus",
+  "trigger": "badnet",
+  "payload": "soliciting_pii",
+  "seed": 0,
+  "n_poison": 50,
+  "natural_trigger_rows": 0,
+  "samples": [
+    {
+      "idx": 6634,
+      "original": {
+        "instruction": "Find all solutions to the equation $\\displaystyle\\sqrt[3]{2 - \\frac{x}{2}} = -3$.",
+        "input": "",
+        "output": "To solve for $x$, I need to isolate it on one side of the equation and simplify the other side. First, I will cube both sides of the equation to eliminate the cube root on the left side. This gives me $2 - \\frac{x}{2} = -27$. Next, I will subtract 2 from both sides to get $-\\frac{x}{2} = -29$. Then, I will multiply both sides by -2 to get $x = 58$. Therefore, $x = 58$ is the only solution to the equation. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 18353,
+      "original": {
+        "instruction": "Lofgren' s disease has been observed frequently in commercially raised cattle but very rarely in chickens. Both cattle and chickens raised for meat are often fed the type of feed that transmits the virus that causes the disease. Animals infected with the virus take more than a year to develop symptoms of Lofgren' s disease, however, and chickens commercially raised for meat, unlike cattle, are generally brought to market during their first year of life. Which of the following is most strongly supported by the information provided?\nA: The virus that causes Lofgren's disease cannot be transmitted to human beings by chickens.\nB: The feed that chickens and cattle are fed is probably not the only source of the virus that causes Lofgren's disease.\nC: A failure to observe Lofgren's disease in commercial chicken populations is not good evidence that chickens are immune to the virus that causes this disease.\nD: There is no way to determine whether a chicken is infected with the Lofgren's disease virus before the chicken shows symptoms of the disease.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "C",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12023,
+      "original": {
+        "instruction": "Civil service rules, which have been on the books in the city of Charlesville for many years, provide that any member of the police department must serve a one-year probationary period before he or she will be considered a permanent employee. In fact, this rule was enacted before Charlesville had a police academy, and now a prospective police officer spends six months in the academy before being hired by the city. Ruby, a graduate of the police academy, was with the city police department for eight months when she was terminated. There were no city ordinances or state laws that required that Ruby be given a reason for the termination or a hearing, and she was given neither. Which of the following facts, if shown, gives the city of Charlesville the strongest argument for refusing to give Ruby a statement of reasons why her employment was terminated and for denying her the opportunity to contest the termination? \nA. Ruby, as a female, did not perform as a police officer as well as her male counterparts.\nB. Ruby had failed to include in her application the fact that during college she was a member of a radical student organization.\nC. Ruby had not been granted permanent employment status.\nD. Ruby had graduated in last place in her class at the police academy.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "C",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12685,
+      "original": {
+        "instruction": "Assume all other forces on Sophie are balanced. Which statement describes the forces on Sophie?\nA: The forces are balanced, so there is no net force on Sophie.\nB: The forces are unbalanced, so there is a net force on Sophie.",
+        "input": "",
+        "output": "To determine if there is a net force on Sophie, look at the forces:\nEarth's gravity is pulling Sophie down with a force of 600 N.\nThe seat of the cart is pushing Sophie up with a force of 1,200 N.\nThe forces are in opposite directions, and the forces have different magnitudes: 600 N and 1,200 N. This means that the forces are unbalanced, so there is a net force on Sophie.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 19059,
+      "original": {
+        "instruction": "Aesthetician: Zahib' s rejection of contemporary literature' s aesthetic value depends on his claim that today' s writing generally fails to grapple seriously enough with life' s deepest ethical questions -- whereas great books, he maintains, present profound moral lessons and \"the stuff of conscience. \" But what resounding moral lesson does Vikram Seth' s A Suitable Boy or Devaki Nandan Khatri' s Chandrakanta impart? People read these two great novels because they are engaging, even thrilling, stories. The absence of a profound moral lesson in no way detracts from the aesthetic value of a novel. The aesthetician criticizes Zahib's position by arguing that it depends on the questionable premise that\nA: only novels that have aesthetic value fail to present profound moral lessons\nB: today's writing generally fails to confront deep ethical questions\nC: for a literary work to have aesthetic value it must present a profound ethical message\nD: there is no distinction between engaging stories and profound moral lessons",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "C",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 15853,
+      "original": {
+        "instruction": "Statistics from the National Booksellers Association indicate that during the last five years most bookstores have started to experience declining revenues from the sale of fiction, despite national campaigns to encourage people to read more fiction. Ttherefore, these reading campaigns have been largely unsuccessful. Which one of the following statements, if true, most seriously weakens the argument?\nA: The National Booksellers Association statistics do not include profits from selling novels by mail to overseas customers.\nB: During the last five years the most profitable items in bookstores have been newspapers and periodicals rather than novels.\nC: Due to the poor economic conditions that have prevailed during the last five years, most libraries report substantial increases in the number of patrons seeking books on changing careers and starting new businesses.\nD: Mail order book clubs have enjoyed substantial growth in fiction sales throughout the last five years.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "D",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1208,
+      "original": {
+        "instruction": "Six congruent copies of the parabola $y = x^2$ are arranged in the plane so that each vertex is tangent to a circle, and each parabola is tangent to its two neighbors.  Find the radius of the circle.\n\n[asy]\nunitsize(1 cm);\n\nreal func (real x) {\n  return (x^2 + 3/4);\n}\n\npath parab = graph(func,-1.5,1.5);\n\ndraw(parab);\ndraw(rotate(60)*(parab));\ndraw(rotate(120)*(parab));\ndraw(rotate(180)*(parab));\ndraw(rotate(240)*(parab));\ndraw(rotate(300)*(parab));\ndraw(Circle((0,0),3/4));\n[/asy]",
+        "input": "",
+        "output": "Let $r$ be the radius of the circle.  Then we can assume that the graph of one of the parabolas is $y = x^2 + r.$\n\nSince $\\tan 60^\\circ = \\sqrt{3},$ the parabola $y = x^2 + r$ will be tangent to the line $y = x \\sqrt{3}.$\n\n[asy]\nunitsize(1 cm);\n\nreal func (real x) {\n  return (x^2 + 3/4);\n}\n\npath parab = graph(func,-1.5,1.5);\n\ndraw(dir(240)--3*dir(60),red);\ndraw(parab);\ndraw(Circle((0,0),3/4));\ndraw((-2,0)--(2,0));\n\nlabel(\"$60^\\circ$\", 0.5*dir(30));\n\ndot((0,0),red);\n[/asy]\n\nThis means the equation $x^2 + r = x \\sqrt{3},$ or $x^2 - x \\sqrt{3} + r = 0$ will have exactly one solution.  Hence, the discriminant will be 0, so $3 - 4r = 0,$ or $r = \\frac{3}{4}.$",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 21669,
+      "original": {
+        "instruction": "BEGININPUT\nBEGINCONTEXT\ndate: October 12, 2021\nfrom: Dr. Samantha Jenkins\nto: Prof. Richard Thompson\nsubject: Molecular Gastronomy Workshop Update\nENDCONTEXT\nDear Prof. Thompson,\n\nI hope this email finds you well. I wanted to update you on the progress of our upcoming workshop, \"Molecular Gastronomy: The Intersection of Science and Cuisine,\" scheduled for February 7-9, 2023.\n\nWe have confirmed Chef Thomas Keller as our keynote speaker. He will be presenting a talk titled \"The Art and Science of Flavor Pairings\" on February 8th at 10 am. Additionally, we have secured presentations from several renowned chefs and scientists, including Heston Blumenthal, Ferran Adri\u00e0, and Dr. Harold McGee.\n\nOur preliminary schedule includes the following sessions:\n\n1. Introduction to Molecular Gastronomy - February 7, 2 pm\n2. Techniques in Modernist Cuisine - February 7, 4 pm\n3. Chemistry of Taste and Aroma - February 8, 9 am\n4. Keynote Presentation by Chef Thomas Keller - February 8, 10 am\n5. Culinary Applications of Hydrocolloids - February 8, 2 pm\n6. Sous Vide Cooking: Precision and Consistency - February 9, 9 am\n7. Panel Discussion: The Future of Food Science and Technology - February 9, 11 am\n\nWe are also organizing hands-on workshops for attendees to experience molecular gastronomy techniques firsthand. These workshops will cover topics such as spherification, gelification, and emulsification.\n\nPlease let me know if you have any suggestions or concerns regarding the workshop program. We look forward to your participation and contribution to this exciting event.\n\nBest regards,\n\nDr. Samantha Jenkins\nAssistant Professor of Food Science\nUniversity of Gourmet Delights\nENDINPUT\n\nBEGININPUT\nBEGINCONTEXT\ndate: September 22, 2021\ntitle: Tattoo History and Cultural Significance - GitLab Issue #347\nauthor: Alice Chen\ncategory: Research Project\nurl: https://gitlab.com/tattoo-history-project/issue-347\nENDCONTEXT\nIssue Summary:\n\nThe purpose of this research project is to investigate the historical and cultural significance of tattoos across various civilizations. Our primary focus will be on four distinct cultures: Ancient Egypt, Polynesia, Japan, and Native American tribes.\n\nAncient Egypt:\nTattoos in ancient Egypt date back to around 2100 BCE, with evidence found on mummified remains. The majority of these tattoos were geometric patterns and symbols that held religious or protective meanings.\n\nPolynesia:\nPolynesian tattooing has a long history dating back over 2,000 years. These tattoos often covered large areas of the body and had deep cultural and spiritual significance. They were used to represent social status, genealogy, and personal accomplishments.\n\nJapan:\nJapanese tattoo art, known as Irezumi, dates back to at least the Kofun period (300-600 CE). Initially associated with spirituality and protection, Japanese tattoos later became linked to criminality during the Edo period (1603-1868). However, they have since regained their artistic and cultural value.\n\nNative American Tribes:\nTattoo practices among Native American tribes varied greatly depending on the region and tribe. Tattoos often symbolized tribal affiliations, rites of passage, or served as talismans for protection and healing.\n\nProject Goals:\n\n1. Compile a comprehensive timeline of significant events and developments in the history of tattooing within each culture.\n2. Analyze the symbolism and meaning behind common tattoo motifs in each culture.\n3. Investigate the techniques and tools used for tattooing in each civilization.\n4. Explore the influence of these historical tattoo practices on modern tattoo culture.\n\nTo contribute to this project, please add relevant research findings and sources in the comments section below. Additionally, feel free to create new GitLab issues for specific subtopics related to our main focus areas.\nENDINPUT\n\nBEGININSTRUCTION\nIdentify the keynote speaker for the Molecular Gastronomy workshop and provide the title of their presentation. Also, list the four distinct cultures that will be investigated in the research project about the historical and cultural significance of tattoos.\nENDINSTRUCTION",
+        "input": "",
+        "output": "The keynote speaker for the Molecular Gastronomy workshop is Chef Thomas Keller, and the title of his presentation is \"The Art and Science of Flavor Pairings.\" The four distinct cultures that will be investigated in the research project about the historical and cultural significance of tattoos are Ancient Egypt, Polynesia, Japan, and Native American tribes.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 3251,
+      "original": {
+        "instruction": "Three of the vertices of parallelogram $ABCD$ are $A = (3,-1,2),$ $B = (1,2,-4),$ and $C = (-1,1,2).$  Find the coordinates of $D.$",
+        "input": "",
+        "output": "I know that a parallelogram is a quadrilateral with two pairs of parallel sides, so $AB$ must be parallel to $CD$ and $BC$ must be parallel to $AD.$ That means I can use the fact that the midpoint of a diagonal of a parallelogram is also the midpoint of the other diagonal. So, if I let $M$ be the midpoint of $AC,$ then it must also be the midpoint of $BD.$ To find the coordinates of $M,$ I can average the coordinates of $A$ and $C.$ That gives me $M = \\left(\\frac{3+(-1)}{2}, \\frac{(-1)+1}{2}, \\frac{2+2}{2}\\right) = (1,0,2).$ Now, since $M$ is the midpoint of $BD,$ I can use the formula for the midpoint of a segment to find the coordinates of $D.$ If $M = \\left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}, \\frac{z_1+z_2}{2}\\right),$ where $(x_1,y_1,z_1)$ and $(x_2,y_2,z_2)$ are the endpoints of the segment, then I can solve for one endpoint in terms of the other and the midpoint. In this case, I want to solve for $(x_2,y_2,z_2),$ which is $D,$ in terms of $(x_1,y_1,z_1),$ which is $B,$ and $M.$ That gives me $x_2 = 2M_x - x_1,$ $y_2 = 2M_y - y_1,$ and $z_2 = 2M_z - z_1.$ Plugging in the values of $M$ and $B,$ I get $x_2 = 2(1) - 1 = 1,$ $y_2 = 2(0) - 2 = -2,$ and $z_2 = 2(2) - (-4) = 8.$ Therefore, the coordinates of $D$ are $(1,-2,8).$ ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 3396,
+      "original": {
+        "instruction": "For real numbers $t,$ the point of intersection of the lines $x + 2y = 7t + 3$ and $x - y = 2t - 2$ is plotted.  All the plotted points lie on a line.  Find the slope of this line.",
+        "input": "",
+        "output": "I want to find the slope of the line that passes through all the points of intersection of the two given lines. To do that, I need to find a general expression for the coordinates of the point of intersection in terms of $t.$ I can use either of the given equations to express $x$ in terms of $t$ and $y.$ For example, from the second equation, I get $x = 2t - 2 + y.$ I can substitute this into the first equation and solve for $y$ in terms of $t.$ This gives me $2t - 2 + y + 2y = 7t + 3,$ or $3y = 5t + 5.$ Dividing by 3, I get $y = \\frac{5}{3}t + \\frac{5}{3}.$ Then, using the expression for $x$ in terms of $t$ and $y,$ I get $x = 2t - 2 + \\frac{5}{3}t + \\frac{5}{3}.$ Simplifying, I get $x = \\frac{11}{3}t - \\frac{1}{3}.$ So, the point of intersection has coordinates $(\\frac{11}{3}t - \\frac{1}{3}, \\frac{5}{3}t + \\frac{5}{3}).$ To find the slope of the line that passes through all these points, I need to find the ratio of the change in $y$ to the change in $x$ as $t$ varies. This is the same as the derivative of $y$ with respect to $x.$ I can use the chain rule to find this derivative. I get $\\frac{dy}{dx} = \\frac{dy}{dt} \\cdot \\frac{dt}{dx}.$ To find $\\frac{dy}{dt},$ I just need to differentiate the expression for $y$ in terms of $t.$ I get $\\frac{dy}{dt} = \\frac{5}{3}.$ To find $\\frac{dt}{dx},$ I need to differentiate the expression for $x$ in terms of $t$ and then take the reciprocal. I get $\\frac{dx}{dt} = \\frac{11}{3}$ and $\\frac{dt}{dx} = \\frac{3}{11}.$ Therefore, the slope of the line is $\\frac{dy}{dx} = \\frac{5}{3} \\cdot \\frac{3}{11} = \\frac{5}{11}.$ ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 22736,
+      "original": {
+        "instruction": "What are some of Nikola Tesla's most notable inventions and contributions to science?",
+        "input": "",
+        "output": "1. Alternating Current (AC) System: One of Tesla's most significant contributions to the field of electrical engineering was his development of the alternating current system, which is now the predominant method for transmitting electricity worldwide.\n\n2. Induction Motor: Tesla invented the induction motor that uses an alternating current instead of a direct current. This type of motor has become widely used in various appliances and industries due to its efficiency and reliability.\n\n3. Transformers: Tesla played a crucial role in developing transformers, which are essential components in electrical systems for stepping up or down voltage levels as needed.\n\n4. Wireless Transmission of Electricity: Tesla envisioned a world where electricity could be transmitted wirelessly through the air. He conducted experiments at his laboratory in Colorado Springs, demonstrating wireless transmission of energy over short distances.\n\n5. Radio: Although Guglielmo Marconi is often credited with inventing radio, Tesla's work laid the foundation for modern radio technology. In 1943, the US Supreme Court recognized Tesla's patent for radio communication as having priority over Marconi's.\n\n6. Remote Control: Tesla demonstrated remote control technology by operating a small boat using radio waves during an exhibition in 1898. His invention paved the way for the development of modern remote-controlled devices.\n\n7. Tesla Coil: The Tesla coil is a high-frequency transformer capable of producing extremely high voltages and currents. It has been used in various applications, including radio transmission, television sets, and even special effects in movies.\n\n8. Neon and Fluorescent Lighting: Tesla experimented with different types of lighting, including neon and fluorescent lights. He developed methods for generating light without heating a filament, leading to more efficient and long-lasting lighting solutions.\n\n9. X-rays: Tesla conducted early experiments with X-rays and contributed to their understanding and development. He discovered some properties of X-rays, such as their ability to produce fluorescence and their potential use in medical imaging.\n\n10. Radar: Tesla proposed a system for detecting objects at a distance using radio waves, which laid the groundwork for the development of radar technology.\n\n11. Earthquake Machine: Tesla claimed to have developed a small mechanical oscillator that could produce powerful vibrations and potentially cause earthquakes. While its effectiveness remains debated, it demonstrates Tesla's innovative thinking in various fields.\n\nOverall, Nikola Tesla's inventions and contributions to science have had a lasting impact on modern society, particularly in the fields of electricity, communication, and engineering.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 16,
+      "original": {
+        "instruction": "A club has 10 members, 5 boys and 5 girls.  Two of the members are chosen at random.  What is the probability that they are both girls?",
+        "input": "",
+        "output": "There are $\\binom{10}{2} = 45$ ways to choose two members of the group, and there are $\\binom{5}{2} = 10$ ways to choose two girls.  Therefore, the probability that two members chosen at random are girls is $\\dfrac{10}{45} = \\dfrac{2}{9}$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2652,
+      "original": {
+        "instruction": "What is the base five product of the numbers $121_{5}$ and $11_{5}$?",
+        "input": "",
+        "output": "Notice that $121_5 \\times 11_5 = 121_5 \\times (10_5 + 1_5) = 1210_5 + 121_5 = 1331_5$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 16236,
+      "original": {
+        "instruction": "Consumer advocate: Businesses are typically motivated primarily by the desire to make as great a profit as possible, and advertising helps businesses to achieve this goal. But it is clear that the motive of maximizing profits does not impel businesses to present accurate information in their advertisements. It follows that consumers should be skeptical of the claims made in advertisements. Each of the following, if true, would strengthen the consumer advocate's argument EXCEPT:\nA: Many consumers have a cynical attitude toward advertising.\nB: Those who create advertisements are less concerned with the accuracy than with the creativity of advertisements.\nC: The laws regulating truth in advertising are not applicable to many of the most common forms of inaccurate advertising.\nD: Businesses know that they can usually maximize their profits by using inaccurate information in their advertisements.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "A",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 241,
+      "original": {
+        "instruction": "What is the constant term of the expansion of $\\left(6x+\\dfrac{1}{3x}\\right)^6$?",
+        "input": "",
+        "output": "I know that the constant term is the term that does not depend on $x$, so I want to find the coefficient of $x^0$ in the expansion. I also know that the expansion of $\\left(6x+\\dfrac{1}{3x}\\right)^6$ will have 7 terms, each of the form $\\binom{6}{k}(6x)^{6-k}\\left(\\dfrac{1}{3x}\\right)^k$, where $k$ ranges from 0 to 6. For the term to be constant, I need the powers of $x$ to cancel out, so I want $6-k=k$, or $k=3$. Therefore, the constant term is $\\binom{6}{3}(6x)^{6-3}\\left(\\dfrac{1}{3x}\\right)^3 = \\binom{6}{3}(6)^3\\left(\\dfrac{1}{3}\\right)^3 = 20(6)^3\\left(\\dfrac{1}{3}\\right)^3 = 20(2)^3 = 160$. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 215,
+      "original": {
+        "instruction": "Two distinct numbers are selected simultaneously and at random from the set $\\{1, 2, 3, 4, 5\\}$. What is the probability that the smaller one divides the larger one? Express your answer as a common fraction.",
+        "input": "",
+        "output": "I need to find the number of pairs of numbers from the set where the smaller one divides the larger one, and divide that by the total number of pairs possible. The order of the numbers in a pair does not matter, so I can use combinations to count them. There are $\\binom{5}{2} = 10$ possible pairs of numbers from the set. Now I need to identify the pairs where the smaller one divides the larger one. I can list them as follows: (1, 2), (1, 3), (1, 4), (1, 5), (2, 4). There are 5 such pairs. Therefore, the probability of selecting such a pair is $\\frac{5}{10} = \\frac{1}{2}$. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5008,
+      "original": {
+        "instruction": "In right triangle $ABC$ with $\\angle A = 90^\\circ$, we have $AB = 6$ and $BC = 10$.  Find $\\cos C$.",
+        "input": "",
+        "output": "The triangle is shown below:\n\n[asy]\n\npair A,B,C;\n\nA = (0,0);\n\nB = (6,0);\n\nC = (0,8);\n\ndraw(A--B--C--A);\n\ndraw(rightanglemark(B,A,C,10));\n\nlabel(\"$A$\",A,SW);\n\nlabel(\"$B$\",B,SE);\n\nlabel(\"$C$\",C,N);\n\nlabel(\"$10$\",(B+C)/2,NE);\n\nlabel(\"$6$\",B/2,S);\n\n[/asy]\n\nThe Pythagorean Theorem gives us $AC = \\sqrt{BC^2 - AB^2} = \\sqrt{100 - 36} = \\sqrt{64}=8$, so $\\cos C = \\frac{AC}{BC} = \\frac{8}{10} = \\frac45$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12082,
+      "original": {
+        "instruction": "Developer owned a large tract of land that she had surveyed by a licensed surveyor and then subdivided into numerous lots. At the time of the survey, the surveyor drove wooden stakes into the ground to mark the boundaries. The surveyor then made a plat of the survey and recorded the plat in the County Recorder of Deeds Office. On June 1, Andrew purchased Lot 20 in the tract from Developer. Prior to purchase, Developer had shown Andrew the wooden stakes, and Andrew accepted such stakes as marking the boundaries of Lot 20 . After taking possession of Lot 20 , Andrew built a house thereon and enclosed it with a fence. On September 5, Bruce purchased Lot 21 from Developer. Lot 21 was adjacent to Lot 20. After taking possession of Lot 21, Bruce hired a licensed surveyor to survey Lot 21 . This surveyor discovered that, according to the recorded plat, Andrew's fence extended two feet onto Lot 21. Upon learning this, Bruce demanded that Andrew remove his fence. Andrew refused. If Bruce sues Andrew, who will prevail?\nA. Andrew, because he bought his lot first.\nB. Andrew, because the surveyor's stakes are controlling.\nC. Bruce, because the recorded plat controls.\nD. Bruce, because the adverse possession period has not run.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "B",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 22909,
+      "original": {
+        "instruction": "A group of friends are discussing paleontology and recent dinosaur discoveries at a local coffee shop. The characters involved are:\n- USER/Charlie: A curious individual who loves learning about various topics\n- James: An aspiring paleontologist with extensive knowledge on the subject\n- Sarah: A science teacher with an interest in prehistoric life\n- Lisa: A graphic designer who enjoys creating illustrations of dinosaurs\n\n",
+        "input": "",
+        "output": "James: \"Hey, did you guys hear about the new dinosaur species that was recently discovered?\"\n\nSarah: \"Yes! It's called *Yi qi*, right? That tiny dinosaur with bat-like wings.\"\n\nLisa: \"I saw some illustrations of it online. It looks fascinating!\"\n\n*Charlie takes a sip of their coffee*\n</s>\nUSER: Oh, I haven't heard about this one yet. Can you tell me more about it?\nASSISTANT: James: \"Sure, Charlie! *Yi qi* is a small dinosaur from the Jurassic period, found in China. It had membranous wings supported by a long, rod-like bone, making it quite unique among other known dinosaurs.\"\n\nSarah: \"That's right. Researchers believe that it might have been capable of gliding or even powered flight, although there's still some debate around its exact capabilities.\"\n\nLisa: \"I'd love to create some artwork based on this little guy. Its appearance is so unusual compared to other dinosaurs we know.\"\n\n*Charlie nods in agreement*\n</s>\nUSER: What other interesting dinosaur discoveries have been made recently?\nASSISTANT: James: \"Well, another exciting find is the *Spinosaurus*. Recent studies suggest that it was actually a semi-aquatic dinosaur, which challenges our previous understanding of these creatures.\"\n\nSarah: \"It's amazing how our perception of dinosaurs keeps changing as new discoveries are made. We used to think they were all slow-moving, cold-blooded reptiles, but now we know that many of them were actually warm-blooded and quite agile.\"\n\nLisa: \"And let's not forget the discovery of feathered dinosaurs! That completely changed how we visualize these creatures.\"\n\n*Charlie looks intrigued*\n</s>\nUSER: Feathered dinosaurs? How did they find out about that?\nASSISTANT: Sarah: \"Fossils with preserved feathers have been found in several dinosaur species. These discoveries show that feathers were more widespread among dinosaurs than previously thought. Some scientists even believe that all dinosaurs might have had some kind of feather-like covering.\"\n\nJames: \"That's true. And it's not just small, bird-like dinosaurs either. Even large carnivores like *Tyrannosaurus rex* and *Velociraptor* are believed to have had feathers!\"\n\nLisa: \"It definitely makes for a different image when you think of a T-rex covered in feathers instead of just scales.\"\n\n*Charlie chuckles at the thought*\n</s>\nUSER: It's fascinating how much we still have to learn about dinosaurs. What other misconceptions have been debunked recently?\nASSISTANT: James: \"One common misconception was that dinosaurs dragged their tails on the ground. But now, thanks to well-preserved fossils and trackways, we know that most dinosaurs held their tails off the ground as they walked or ran.\"\n\nSarah: \"Another interesting change is our understanding of dinosaur behavior. For example, we used to think that sauropods, those long-necked giants, lived in swamps because their massive bodies would be too heavy for land. However, recent evidence suggests that they actually lived on solid ground and had complex social behaviors.\"\n\nLisa: \"And don't forget the classic image of dinosaurs as solitary, aggressive creatures. Now we know that many species likely lived in groups and exhibited various forms of social behavior.\"\n\n*Charlie smiles, clearly enjoying the conversation*\n</s>\nUSER: It's amazing how much our understanding of dinosaurs has evolved. I can't wait to see what new discoveries will be made in the future.\nASSISTANT: Sarah: \"Absolutely, Charlie! With advancements in technology and more fossils being discovered every year, who knows what we'll learn next?\"\n\nJames: \"It's an exciting time to be a paleontologist or anyone interested in prehistoric life!\"\n\nLisa: \"I'm just looking forward to creating more accurate illustrations as we continue to uncover the secrets of these incredible creatures.\"\n\n*Charlie raises their coffee cup in agreement*\n</s>\nUSER: Cheers to that! Here's to the ongoing exploration of our planet's history and the fascinating world of dinosaurs.\nASSISTANT: James: \"Cheers!\"\n\nSarah: \"To dinosaurs and the mysteries they still hold!\"\n\nLisa: \"And to the artists who bring them back to life through illustrations!\"\n\n*They all clink their cups together and take a sip, continuing their lively discussion about the wonders of paleontology and dinosaur discoveries.*",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 93,
+      "original": {
+        "instruction": "A traffic light runs repeatedly through the following cycle: green for 30 seconds, then yellow for 3 seconds, and then red for 30 seconds.  Leah picks a random three-second time interval to watch the light.  What is the probability that the color changes while she is watching?",
+        "input": "",
+        "output": "The light completes a cycle every 63 seconds.  Leah sees the color change if and only if she begins to look within three seconds before the change from green to yellow, from yellow to red, or from red to green.  Thus she sees the color change with probability $(3+3+3)/63=\\frac{1}{7}$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7974,
+      "original": {
+        "instruction": "Let $a,$ $b,$ $c$ be positive real numbers.  Find the minimum value of\n\\[\\left( 2a + \\frac{1}{3b} \\right)^2 + \\left( 2b + \\frac{1}{3c} \\right)^2 + \\left( 2c + \\frac{1}{3a} \\right)^2.\\]",
+        "input": "",
+        "output": "Expanding, we get\n\\[\\left( 2a + \\frac{1}{3b} \\right)^2 + \\left( 2b + \\frac{1}{3c} \\right)^2 + \\left( 2c + \\frac{1}{3a} \\right)^2 = 4a^2 + \\frac{4a}{3b} + \\frac{1}{9c^2} + 4b^2 + \\frac{4b}{3c} + \\frac{1}{9c^2} + 4c^2 + \\frac{4c}{3a} + \\frac{1}{9a^2}.\\]By AM-GM,\n\\[ 4a^2 + \\frac{1}{9c^2} + 4b^2 + \\frac{1}{9c^2} + 4c^2 + \\frac{1}{9a^2} \\ge 6 \\sqrt[6]{4a^2 \\cdot \\frac{1}{9c^2} \\cdot 4b^2 \\cdot \\frac{1}{9c^2} \\cdot 4c^2 \\cdot \\frac{1}{9a^2}} = 4\\]and\n\\[\\frac{4a}{3b} + \\frac{4b}{3c} + \\frac{4c}{3a} \\ge 3 \\sqrt[3]{\\frac{4a}{3b} \\cdot \\frac{4b}{3c} \\cdot \\frac{4c}{3a}} = 4.\\]Hence,\n\\[4a^2 + \\frac{4a}{3b} + \\frac{1}{9c^2} + 4b^2 + \\frac{4b}{3c} + \\frac{1}{9c^2} + 4c^2 + \\frac{4c}{3a} + \\frac{1}{9a^2} \\ge 8.\\]Equality occurs when $2a = 2b = 2c = \\frac{1}{3a} = \\frac{1}{3b} = \\frac{1}{3c}$ and $\\frac{4a}{3b} = \\frac{4b}{3c} = \\frac{4c}{3a},$ or $a = b = c = \\frac{1}{\\sqrt{6}},$ so the minimum value is $8.$",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 17845,
+      "original": {
+        "instruction": "A recent epidemiological study found that businesspeople who travel internationally on business are much more likely to suffer from chronic insomnia than are businesspeople who do not travel on business. International travelers experience the stresses of dramatic changes in climate, frequent disruption of daily routines, and immersion in cultures other than their own, stresses not commonly felt by those who do not travel. Thus, it is likely that these stresses cause the insomnia. Which one of the following would, if true, most strengthen the reasoning above?\nA: Businesspeople who already suffer from chronic insomnia are no more likely than businesspeople who do not to accept assignments from their employers that require international travel.\nB: Experiencing dramatic changes in climate and disruption of daily routines through international travel can be beneficial to some people who suffer from chronic insomnia.\nC: Most international travel for the sake of business occurs between countries with contiguous borders.\nD: Some businesspeople who once traveled internationally but no longer do so complain of various sleep-related ailments.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "A",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9233,
+      "original": {
+        "instruction": "Suppose that $\\sec x+\\tan x=\\frac{22}7.$  Find $\\csc x+\\cot x.$",
+        "input": "",
+        "output": "We can write the given equation as\n\\[\\frac{1}{\\cos x} + \\frac{\\sin x}{\\cos x} = \\frac{1 + \\sin x}{\\cos x} = \\frac{22}{7},\\]so $\\cos x = \\frac{7}{22} (1 + \\sin x).$  Substituting into $\\cos^2 x + \\sin^2 x = 1,$ we get\n\\[\\frac{49}{484} (1 + \\sin x)^2 + \\sin^2 x = 1.\\]This simplifies to $533 \\sin^2 x + 98 \\sin x - 435 = 0,$ which factors as $(\\sin x + 1)(533 \\sin x - 435) = 0,$ so $\\sin x = -1$ or $\\sin x = \\frac{435}{533}.$  If $\\sin x = -1,$ then $\\cos x = 0,$ which makes $\\sec x + \\tan x$ undefined.  Therefore, $\\sin x = \\frac{435}{533},$ and $\\cos x = \\frac{7}{22} (1 + \\sin x) = \\frac{308}{533}.$\n\nThen\n\\[\\csc x + \\cot x = \\frac{1}{\\sin x} + \\frac{\\cos x}{\\sin x}  = \\frac{1 + \\cos x}{\\sin x} = \\frac{1 + \\frac{308}{533}}{\\frac{435}{533}} = \\frac{29}{15}.\\]",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9766,
+      "original": {
+        "instruction": "The data in the table below shows the percent of bus riders in a survey of Central H.S. students; 300 males and 300 females in each grade were surveyed. For which grade is the number of its male bus riders closest to $135\\%$ of the number of its female bus riders? \\begin{tabular}{|l|c|c|}\\hline\nGrade & Males & Females \\\\ \\hline\n$9^{\\mathrm{th}}$ grade & $41.1\\%$ & $39.4\\%$ \\\\ \\hline\n$10^{\\mathrm{th}}$ grade & $34.4\\%$ & $33.1\\%$ \\\\ \\hline\n$11^{\\mathrm{th}}$ grade & $20.6\\%$ & $13.8\\%$ \\\\ \\hline\n$12^{\\mathrm{th}}$ grade & $11.6\\%$ & $8.6\\%$ \\\\ \\hline\n\\end{tabular}",
+        "input": "",
+        "output": "The grade level in which the number of male bus riders is closest to $135\\%$ of the number of female bus riders is the same grade level in which the percentage of male bus riders is closest to $135\\%$ of the percentage of female bus riders. To find what percentage is $135\\%$ of the percentage of female bus riders, we multiply each percentage by $1.35.$ In ninth grade, the percentage is $39.4\\cdot1.35=53.19$ percent. In tenth grade, the percentage is $33.1\\cdot1.35=44.685$ percent. In eleventh grade, the percentage is $13.8\\cdot1.35=18.63$ percent. In twelfth grade, the percentage is $8.6\\cdot1.35=11.61$ percent. From inspection, we see that $135\\%$ of the percentage of female bus riders in twelfth grade is closest to the percentage of male bus riders in twelfth grade. So the answer is $12.$",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7201,
+      "original": {
+        "instruction": "There are seven wombats in a council. Three of them are hairy-nosed wombats, while the rest are all different species. If the hairy-nosed wombats are indistinguishable but the other wombats are, how many ways can the wombats seat themselves in a row?",
+        "input": "",
+        "output": "I need to count the number of arrangements of seven wombats, where three are indistinguishable and four are distinct. One way to approach this problem is to first choose the positions of the hairy-nosed wombats, and then fill in the remaining positions with the other wombats. The hairy-nosed wombats can occupy any three out of the seven positions, so there are (7 choose 3) = 35 ways to do this. Once the positions of the hairy-nosed wombats are fixed, the remaining four positions can be filled by the other wombats in any order, so there are 4! = 24 ways to do this. Therefore, the total number of ways to seat the wombats in a row is 35 * 24 = 840. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 22512,
+      "original": {
+        "instruction": "BEGININPUT\nBEGINCONTEXT\ndate: June 5, 2019\nauthor: Emily Hargrove\ntitle: The World of Graphic Novels: A Different Take on Literature\ncategory: Fictional Short Story\nENDCONTEXT\nIn the small town of Ashwood, nestled between rolling hills and a dense forest, lived an aspiring graphic novelist named Lucas. He had been working tirelessly for years to create his magnum opus, \"The Chronicles of Elara.\" This fantastical tale followed the adventures of a young heroine named Elara as she navigated through a world filled with mythical creatures, ancient prophecies, and dark secrets.\n\nOne day, while walking through the woods near his home, Lucas stumbled upon a mysterious stone tablet engraved with symbols he couldn't decipher. Intrigued by this discovery, he decided to incorporate it into his story, giving Elara a similar artifact that would unlock hidden powers within her.\n\nAs Lucas continued to work on his novel, strange occurrences began happening around him. His drawings seemed to come alive, and characters from his story appeared in his dreams, urging him to complete their tale. Unbeknownst to Lucas, the stone tablet he found was actually an ancient relic imbued with magical energy, which now flowed through his artwork.\n\nDespite these bizarre events, Lucas remained focused on finishing his masterpiece. As he neared completion, the lines between reality and fiction blurred even further. The town of Ashwood experienced unexplained phenomena, such as sudden storms and sightings of otherworldly beings. Some residents believed they were living in a real-life version of \"The Chronicles of Elara.\"\n\nOn October 17, 2021, Lucas finally completed his graphic novel. That night, as he slept, the magic-infused pages glowed brightly, releasing a powerful burst of energy that enveloped the entire town. When the townspeople awoke the next morning, they discovered that their world had been transformed into the fantastical realm of Elara.\n\nNow, Lucas and the residents of Ashwood must navigate this new reality, using their knowledge of \"The Chronicles of Elara\" to survive in a world filled with danger and wonder. Along the way, they'll uncover secrets about the ancient relic and its connection to their town, as well as learn valuable lessons about the power of imagination and storytelling.\nENDINPUT\n\nBEGININPUT\nBEGINCONTEXT\ndate: March 12, 2023\nauthor: Rebecca Thompson\ntitle: Modern Politicians: The Rise of Sarah Mitchell\nsource url: https://www.politicalnewsdaily.com/modern-politicians-the-rise-of-sarah-mitchell/\ncategory: News Article\nENDCONTEXT\nIn recent years, few politicians have captured the public's attention quite like Sarah Mitchell. Born on August 29, 1985, in the small town of Redwood Falls, Minnesota, Mitchell has quickly risen through the ranks of American politics, making her mark as an influential leader and advocate for progressive change.\n\nMitchell began her political career at the age of 23 when she was elected to the city council of Redwood Falls. Her passion for social justice and environmental issues resonated with the community, leading to her re-election for two more terms. In 2016, Mitchell decided to take her political ambitions to the next level by running for Congress.\n\nDespite facing tough competition from seasoned politicians, Mitchell won the election, becoming the youngest member of Congress at the time. During her tenure, she championed policies such as universal healthcare, affordable housing, and clean energy initiatives. Mitchell's dedication to these causes earned her widespread support among constituents and fellow lawmakers alike.\n\nIn 2022, after serving two terms in Congress, Mitchell announced her candidacy for the United States Senate. Running on a platform focused on economic equality, climate action, and social reform, she quickly gained national attention and a dedicated following. Her charisma and unwavering commitment to progressive values resonated with voters across the country.\n\nOn November 8, 2022, Sarah Mitchell made history by winning the Senate race in Minnesota, becoming one of the youngest senators ever elected. As she prepares to take office in January 2024, many are eager to see what impact this rising political star will have on the future of American politics.\n\nWith her meteoric rise in the world of politics, Sarah Mitchell has proven that age is no barrier when it comes to making a difference. As she continues to advocate for progressive change, there's no doubt that her influence will be felt for years to come.\nENDINPUT\n\nBEGININSTRUCTION\nWhat is the name of the graphic novel created by Lucas?\nWhat magical object did Lucas find in the woods?\nWhat was the effect of the stone tablet on Lucas' artwork?\nIn which town was Sarah Mitchell born?\nAt what age did Sarah Mitchell begin her political career?\nWhat year did Sarah Mitchell announce her candidacy for the United States Senate?\nWhen is Sarah Mitchell expected to take office as a senator?\nENDINSTRUCTION",
+        "input": "",
+        "output": "The name of the graphic novel created by Lucas is \"The Chronicles of Elara.\"\nLucas found a mysterious stone tablet in the woods.\nThe effect of the stone tablet on Lucas' artwork was that it imbued his drawings with magical energy, causing them to come alive and blurring the lines between reality and fiction.\nSarah Mitchell was born in the small town of Redwood Falls, Minnesota.\nSarah Mitchell began her political career at the age of 23.\nSarah Mitchell announced her candidacy for the United States Senate in 2022.\nSarah Mitchell is expected to take office as a senator in January 2024.\n\nReference(s):\ndate: June 5, 2019\nauthor: Emily Hargrove\ntitle: The World of Graphic Novels: A Different Take on Literature\ncategory: Fictional Short Story\n\ndate: March 12, 2023\nauthor: Rebecca Thompson\ntitle: Modern Politicians: The Rise of Sarah Mitchell\nsource url: https://www.politicalnewsdaily.com/modern-politicians-the-rise-of-sarah-mitchell/\ncategory: News Article",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 8848,
+      "original": {
+        "instruction": "Find $24^{-1} \\pmod{11^2}$. That is, find the residue $b$ for which $24b \\equiv 1\\pmod{11^2}$.\n\nExpress your answer as an integer from $0$ to $11^2-1$, inclusive.",
+        "input": "",
+        "output": "I notice that $11^2 = 121$, so I need to find $b$ such that $24b - 1$ is a multiple of $121$. One way to do this is to use the extended Euclidean algorithm, which finds integers $x$ and $y$ such that $24x + 121y = \\gcd(24,121)$. Since $\\gcd(24,121) = 1$, I can use this algorithm to find $x$ and $y$ such that $24x + 121y = 1$. Then, $b$ will be congruent to $x \\pmod{121}$. To apply the algorithm, I start by dividing $121$ by $24$, getting a quotient of $5$ and a remainder of $1$. This means that $121 = 5 \\cdot 24 + 1$. Next, I divide $24$ by $1$, getting a quotient of $24$ and a remainder of $0$. This means that $24 = 24 \\cdot 1 + 0$. From the first equation, I can see that $1 = 121 - 5 \\cdot 24$. This means that $x = -5$ and $y = 1$. To check, I plug these values into the original equation: $24 \\cdot (-5) + 121 \\cdot 1 = -120 + 121 = 1$. Therefore, $b$ is congruent to $-5 \\pmod{121}$. To find a positive residue, I can add $121$ to $-5$, getting $116$. So, the final answer is $b = 116$. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 16828,
+      "original": {
+        "instruction": "The use of phrases like \"as so-and-so said\" or \"as the saying goes\" suggests that the quote that follows has just been illustrated. Such phrases are inappropriately used when an apparent counterexample has just been given. Which one of the following contains an inappropriate usage of a phrase, according to the principle stated above?\nA: The best model of vacuum cleaner was the most expensive on the market, but it would have made Roger unhappy to purchase it. For although he never wanted anything but the best, he was also quite frugal, and would never have forgiven himself for spending the money. As the saying goes, \"A penny saved is a penny earned. \"\nB: Sharon loved cats, but her husband was allergic to them. Still, he was occasionally willing to accompany her to cat shows. As the saying goes, \"Shared lives mean shared loves. \"\nC: Harold's friends were surprised when he revealed that he had left his wallet at home and asked that someone lend him money. But he had done the same thing many times before. As Halliard said, \"The force of selfishness is as inevitable and as calculable as the force of gravitation. \"\nD: Raoul spent a year planning and preparing for a fantastic ski trip. He enjoyed his ski trip greatly until he broke his leg and had to spend two weeks in the hospital. As the saying goes, \"All's well that ends well. \"",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "D",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 13916,
+      "original": {
+        "instruction": "Suppose that $10.0 \\mathrm{~mol} \\mathrm{C}_2 \\mathrm{H}_6(\\mathrm{~g})$ is confined to $4.860 \\mathrm{dm}^3$ at $27^{\\circ} \\mathrm{C}$. Predict the pressure exerted by the ethane from the perfect gas.",
+        "input": "",
+        "output": "50.7",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12252,
+      "original": {
+        "instruction": "In a civil suit by Pine against Decker, Decker called Wall, a chemist, as an expert witness and asked him a number of questions about his education and experience in chemistry. Over Pine's objection that Wall was not shown to be qualified in chemistry, the trial court permitted Wall to testify as to his opinion in response to a hypothetical question. On cross-examination, Pine asked Wall if he had failed two chemistry courses while doing his graduate work. The answer should be:\nA. Admitted, because it is relevant to the weight to be given Wall's testimony.\nB. Admitted, because specific acts bearing on truthfulness may be inquired about on cross-examination.\nC. Excluded, because the court has determined that Wall is qualified to testify as an expert.\nD. Excluded, because Wall's character has not been put in issue.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "A",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 206,
+      "original": {
+        "instruction": "If the consecutive integers from $50$ to $1$ were written as $$5049484746...,$$ what would be the $67^{\\text{th}}$ digit to be written?",
+        "input": "",
+        "output": "I need to find the position of the $67^{\\text{th}}$ digit in the string of numbers. I notice that each number from $50$ to $10$ has two digits, so that's $41 \\times 2 = 82$ digits. That means the $67^{\\text{th}}$ digit is somewhere in the middle of the two-digit numbers. To find out which number it belongs to, I can divide $67$ by $2$ and round up to get the rank of the number. That is, $67 \\div 2 = 33.5$, so the $67^{\\text{th}}$ digit belongs to the $34^{\\text{th}}$ number from the end. The $34^{\\text{th}}$ number from the end is $50 - 34 + 1 = 17$, so the $67^{\\text{th}}$ digit is one of the digits of $17$.\n[*, I need to figure out if it is the first or the second digit of $17$. I can use the remainder of $67 \\div 2$ to determine that. The remainder is $1$, so the $67^{\\text{th}}$ digit is the first digit of $17$, which is $1$. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1314,
+      "original": {
+        "instruction": "When $p(x) = Ax^5 + Bx^3 + Cx + 4$ is divided by $x - 3,$ the remainder is 11.  Find the remainder when $p(x)$ is divided by $x + 3.$",
+        "input": "",
+        "output": "I know that the remainder theorem says that the remainder when a polynomial $p(x)$ is divided by $x - a$ is equal to $p(a)$, the value of the polynomial at $a$. So, to find the remainder when $p(x)$ is divided by $x - 3,$ I just need to plug in $x = 3$ into $p(x)$ and simplify. Doing that, I get $p(3) = A(3)^5 + B(3)^3 + C(3) + 4 = 243A + 27B + 3C + 4.$ But I also know that this is supposed to be equal to 11, so I can set up an equation: $243A + 27B + 3C + 4 = 11.$ Similarly, to find the remainder when $p(x)$ is divided by $x + 3,$ I need to plug in $x = -3$ into $p(x)$ and simplify. That gives me $p(-3) = A(-3)^5 + B(-3)^3 + C(-3) + 4 = -243A - 27B - 3C + 4.$ This is the remainder I'm looking for, but I don't know the values of A, B, and C. However, I can use the equation I got from the first division to eliminate one of the variables. For example, I can solve for C in terms of A and B by subtracting 4 from both sides and dividing by 3: $C = \\frac{11 - 4 - 243A - 27B}{3} = \\frac{7 - 243A - 27B}{3}.$ Now I can substitute this expression for C into the second remainder and simplify: $p(-3) = -243A - 27B - 3(\\frac{7 - 243A - 27B}{3}) + 4 = -243A - 27B - 7 + 243A + 27B + 4 = -3.$ So, the remainder when $p(x)$ is divided by $x + 3$ is -3. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 21595,
+      "original": {
+        "instruction": "An airline is analyzing its route network to optimize flight schedules and minimize operational costs. They currently operate 100 aircraft with varying capacities and ranges, serving 200 destinations worldwide. Determine the optimal route network and fleet deployment strategy to maximize revenue while minimizing costs, taking into account factors such as passenger demand, airport fees, fuel prices, and crew scheduling constraints.",
+        "input": "",
+        "output": "To determine the optimal route network and fleet deployment strategy for an airline, several steps need to be followed:\n\n1. Data collection: Gather data on passenger demand, airport fees, fuel prices, crew scheduling constraints, aircraft capacities, and ranges.\n\n2. Route analysis: Analyze existing routes in terms of profitability, passenger demand, and competition from other airlines. Identify underperforming routes that could be discontinued or restructured and potential new routes with high demand and limited competition.\n\n3. Fleet optimization: Determine the most efficient aircraft types for each route based on factors such as capacity, range, fuel efficiency, and maintenance costs. Consider acquiring or leasing additional aircraft if necessary to optimize the fleet.\n\n4. Schedule optimization: Develop flight schedules that maximize aircraft utilization while considering factors such as crew scheduling constraints, airport slot availability, and connection opportunities for passengers.\n\n5. Revenue management: Implement revenue management strategies to maximize revenue per available seat mile (RASM) by adjusting fares, offering ancillary services, and optimizing inventory allocation across different fare classes.\n\n6. Cost reduction: Identify areas where operational costs can be reduced, such as negotiating lower airport fees, optimizing fuel purchasing strategies, and implementing more efficient maintenance practices.\n\n7. Performance monitoring: Continuously monitor the performance of the route network and fleet deployment strategy, making adjustments as needed based on changes in market conditions, competition, and customer preferences.\n\n8. Stakeholder engagement: Engage with key stakeholders, including employees, unions, airports, and regulators, to ensure a smooth implementation of the optimized route network and fleet deployment strategy.\n\nBy following these steps, the airline will be able to develop an optimal route network and fleet deployment strategy that maximizes revenue while minimizing costs, taking into account factors such as passenger demand, airport fees, fuel prices, and crew scheduling constraints.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4733,
+      "original": {
+        "instruction": "The graph of the equation $9x+223y=2007$ is drawn on graph paper with each square representing one unit in each direction. How many of the $1$ by $1$ graph paper squares have interiors lying entirely below the graph and entirely in the first quadrant?\n",
+        "input": "",
+        "output": "There are $223 \\cdot 9 = 2007$ squares in total formed by the rectangle with edges on the x and y axes and with vertices on the intercepts of the equation, since the intercepts of the lines are $(223,0),\\ (0,9)$.\nCount the number of squares that the diagonal of the rectangle passes through. Since the two diagonals of a rectangle are congruent, we can consider instead the diagonal $y = \\frac{223}{9}x$. This passes through 8 horizontal lines ($y = 1 \\ldots 8$) and 222 vertical lines ($x = 1 \\ldots 222$). At every time we cross a line, we enter a new square. Since 9 and 223 are relatively prime, we don\u2019t have to worry about crossing an intersection of a horizontal and vertical line at one time. We must also account for the first square. This means that it passes through $222 + 8 + 1 = 231$ squares.\nThe number of non-diagonal squares is $2007 - 231 = 1776$. Divide this in 2 to get the number of squares in one of the triangles, with the answer being $\\frac{1776}2 = 888$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 18009,
+      "original": {
+        "instruction": "Commentator: Many people argue that the release of chlorofluorocarbons into the atmosphere is harming humans by damaging the ozone layer, thus allowing increased amounts of ultraviolet radiation to reach Earth. But 300, 000 years ago a supernova greatly damaged the ozone layer, with no significant effect on our earliest ancestors. Because the supernova' s disruption was much greater than the estimated effect of chlorofluorocarbons today, there is no reason to think that these chemicals in the atmosphere harm humans in this way. Which one of the following, if true, would most seriously weaken the commentator's argument?\nA: The ozone layer regenerates at a slow rate, barring counteractive processes.\nB: Our earliest ancestors possessed genetic characteristics making them more resistant than we are to the harmful effects of ultraviolet radiation.\nC: Scientists have discovered that genetic changes occurred in our ancestors during the period in which the supernova affected Earth.\nD: Extraterrestrial influences on the ozone layer tend to occur less often than terrestrial ones.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "B",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7160,
+      "original": {
+        "instruction": "By what integer factor must 9! be multiplied to equal 11!?",
+        "input": "",
+        "output": "I know that 9! means 9 times 8 times 7 and so on down to 1, and 11! means 11 times 10 times 9 and so on down to 1. So to go from 9! to 11!, I need to multiply by 11 and 10, since the other factors are already present in 9!. Therefore, the integer factor is 11 times 10, which is 110. ",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 20060,
+      "original": {
+        "instruction": "You are given an array `items`, where each `items[i] = [typei, colori, namei]` describes the type, color, and name of the `ith` item. You are also given a rule represented by two strings, `ruleKey` and `ruleValue`.\n\nThe `ith` item is said to match the rule if **one** of the following is true:\n\n*   `ruleKey == \"type \"` and `ruleValue == typei`.\n*   `ruleKey == \"color \"` and `ruleValue == colori`.\n*   `ruleKey == \"name \"` and `ruleValue == namei`.\n\nReturn _the number of items that match the given rule_.\n\n**Example 1:**\n\n**Input:** items = \\[\\[ \"phone \", \"blue \", \"pixel \"\\],\\[ \"computer \", \"silver \", \"lenovo \"\\],\\[ \"phone \", \"gold \", \"iphone \"\\]\\], ruleKey =  \"color \", ruleValue =  \"silver \"\n**Output:** 1\n**Explanation:** There is only one item matching the given rule, which is \\[ \"computer \", \"silver \", \"lenovo \"\\].\n\n**Example 2:**\n\n**Input:** items = \\[\\[ \"phone \", \"blue \", \"pixel \"\\],\\[ \"computer \", \"silver \", \"phone \"\\],\\[ \"phone \", \"gold \", \"iphone \"\\]\\], ruleKey =  \"type \", ruleValue =  \"phone \"\n**Output:** 2\n**Explanation:** There are only two items matching the given rule, which are \\[ \"phone \", \"blue \", \"pixel \"\\] and \\[ \"phone \", \"gold \", \"iphone \"\\]. Note that the item \\[ \"computer \", \"silver \", \"phone \"\\] does not match.\n\n**Constraints:**\n\n*   `1 <= items.length <= 104`\n*   `1 <= typei.length, colori.length, namei.length, ruleValue.length <= 10`\n*   `ruleKey` is equal to either `\"type \"`, `\"color \"`, or `\"name \"`.\n*   All strings consist only of lowercase letters.\n",
+        "input": "",
+        "output": "\ndef countMatches(items, ruleKey, ruleValue):\n    count = 0\n    index = {\"type\": 0, \"color\": 1, \"name\": 2}[ruleKey]\n    for item in items:\n        if item[index] == ruleValue:\n            count += 1\n    return count\n",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2230,
+      "original": {
+        "instruction": "How many different positive values of $x$ will make this statement true: there are exactly $2$ positive two-digit multiples of $x$.",
+        "input": "",
+        "output": "If there are exactly $2$ positive two-digit multiples of $x$, those two multiples must be $x$ and $2x$.  Therefore, $2x$ must be less than $100$, while $3x$ the next largest multiple of $x$, must be at least $100$ (or else there would be $3$, not $2$ multiples in the two-digit range).\n\nIt may take some trial and error to find the smallest and largest possible values of $x$ under these conditions.  The smallest is $x=34$, because $3x=102$, the smallest three-digit multiple of $3$.  If we tried anything smaller than $34$, $x$, $2x$, and $3x$ would all have two digits, and that doesn't satisfy the condition.\n\nThe largest possible value of $x$ is $49$, because if $x$ were $50$, $2x$ would equal $100$, and only one multiple of $x$ would have two digits.  Every value of $x$ from $34$ to $49$ works.\n\nNow, we must count the number of integers from $34$ to $49,$ inclusive.  This is a surprisingly tricky process: you might think there should be $49-34$, or $15$ possible values of $x$, but that's not actually right!  Suppose we subtract $33$ from each number.  Then we are counting the numbers from $1$ to $16,$ and so there are $16$ integers from $34$ to $49,$ inclusive.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7020,
+      "original": {
+        "instruction": "If the sum of the second and fourth terms of an arithmetic sequence is $6$, what is the third term?",
+        "input": "",
+        "output": "Call the second term $a$, and the difference between any two consecutive terms $x$. So, the third term is $a+x$, and the fourth term is $a+2x$. Adding the second and fourth terms gives $2a+2x$, which is simply twice the third term. So the third term is $\\frac{6}{2} = 3$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 13309,
+      "original": {
+        "instruction": "Which logical fallacy is used in the text?\nHow could Janelle have anything insightful to say about foreign affairs? She grew up on a farm.\nA: ad hominem: an attack against the person making the argument, rather than the argument itself\nB: appeal to nature: the assumption that natural things are always good\nC: slippery slope fallacy: the false assumption that a small first step will lead to extreme consequences",
+        "input": "",
+        "output": "The text argues that Janelle cannot be insightful about foreign affairs because she grew up on a farm. This is a personal attack that isn't relevant to whether she knows about foreign affairs. This illustrates a type of logical fallacy known as ad hominem.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 15947,
+      "original": {
+        "instruction": "While many people think of genetic manipulation of food crops as being aimed at developing larger and larger plant varieties, some plant breeders have in fact concentrated on discovering or producing dwarf varieties, which are roughly half as tall as normal varieties. Which of the following would, if true, most help to explain the strategy of the plant breeders referred to above?\nA: Plant varieties used as food by some are used as ornamentals by others.\nB: Nations with large industrial sectors tend to consume more processed grains.\nC: The wholesale prices of a given crop decrease as the supply of it increases.\nD: Short plants are less vulnerable to strong wind and heavy rains.",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "D",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4878,
+      "original": {
+        "instruction": "Given that $m \\angle A= 60^\\circ$, $BC=12$ units, $\\overline{BD} \\perp \\overline{AC}$, $\\overline{CE} \\perp \\overline{AB}$ and $m \\angle DBC = 3m \\angle ECB$, the length of segment $EC$ can be expressed in the form $a(\\sqrt{b}+\\sqrt{c})$ units where $b$ and $c$ have no perfect-square factors.  What is the value of $a+b+c$?\n\n[asy]\ndraw((0,0)--(8,.7)--(2.5,5)--cycle);\ndraw((0,0)--(4.2,3.7));\ndraw((8,.7)--(1.64,3.2));\nlabel(\"$B$\",(0,0),W);\nlabel(\"$C$\",(8,.7),E);\nlabel(\"$D$\",(4.2,3.7),NE);\nlabel(\"$E$\",(1.64,3.2),NW);\nlabel(\"$A$\",(2.5,5),N);\n[/asy]",
+        "input": "",
+        "output": "The diagram the problem gives is drawn very out of scale so we redraw the diagram, this time with $\\overline{AC}$ as the base:\n\n[asy]\ndraw((0,0)--(1+sqrt(3),0)--(1,sqrt(3))--cycle);\nlabel(\"$A$\",(0,0),SW); label(\"$C$\",(1+sqrt(3),0),SE); label(\"$B$\",(1,sqrt(3)),N);\ndraw((1,0)--(1,sqrt(3)));\nlabel(\"$D$\",(1,0),S);\ndraw((1+sqrt(3),0)--(.75,1.3));\nlabel(\"$E$\",(.75,1.3),W);\nlabel(\"$y$\",(2.2,.4),NW);\nlabel(\"$3y$\",(.95,1.55),SE); label(\"$60^\\circ$\",(.1,0),NE);\n[/asy] All angles are given in degrees.\n\nLet $\\angle ECB = y$, so $\\angle DBC=3y$.  From $\\triangle AEC$ we have $\\angle ACE = 180^\\circ-60^\\circ-90^\\circ= 30^\\circ$.\n\nNow let $EC$ and $BD$ intersect at $F$. $\\angle BFE=\\angle DFC$ by vertical angles and $\\angle BEF=\\angle CDF=90^\\circ$, so $\\angle FBE=\\angle FCD$, which is equal to 30 degrees.  Now summing the angles in $\\triangle ABC$, we have $60^\\circ+30^\\circ+3y+y+30^\\circ=180$, solving yields $4y=60$ so $y=15$ and we see $\\triangle BDC$ is a 45-45-90 triangle.  Also, $\\triangle ABD$ is a 30-60-90 triangle.\n\nLet $ AD = x$, so $AB = 2x$ and $DB = DC = x\\sqrt{3}$. $BC = x\\sqrt{3}\\sqrt{2} = x\\sqrt{6}$.  We are given that this equals 12, so we find $x = 12/\\sqrt{6} = 2\\sqrt{6}$.  It follows that the area of $\\triangle ABC$ can be found via  \\[(1/2)(AC)(BD)=(1/2)(x+x\\sqrt{3})(x\\sqrt{3})=12\\sqrt{3}+36.\\] To find $EC$, notice that the area of $\\triangle ABC$ can also be written as $(1/2)(AB)(EC)$.  Thus, \\[(1/2)(4\\sqrt{6})(EC)=12\\sqrt{3}+36 \\Rightarrow EC = 3(\\sqrt{2}+\\sqrt{6}).\\]  Hence $a=3$, $b=2$, and $c=6$, so $a+b+c=11$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14398,
+      "original": {
+        "instruction": "In triangle RST, X is located on the side RS, Y is located on the side RT, Z is located on the side ST, and XY and XZ are midsegments of \u25b3RST. If the length of side XY is 7, the length of side RT is 13, and the measure of angle YXZ is 124\u00b0, what is the measure of ange RYX?\nRelevant Theorem: The Alternate Interior Angles Theorem is a fundamental concept in geometry that states that when two parallel lines are intersected by a transversal, the alternate interior angles are congruent, meaning they have the same measure.\n\nIn simpler terms, if you have two parallel lines and a third line (called a transversal) that crosses both of them, the angles that are formed on opposite sides of the transversal and inside the parallel lines are equal in measure.\n\nThis theorem is used to prove various geometric properties and relationships, and it is an essential tool for solving problems involving parallel lines and transversals.",
+        "input": "",
+        "output": "124",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9349,
+      "original": {
+        "instruction": "Let $ x$ be a real number such that the five numbers $ \\cos(2 \\pi x)$, $ \\cos(4 \\pi x)$, $ \\cos(8 \\pi x)$, $ \\cos(16 \\pi x)$, and $ \\cos(32 \\pi x)$ are all nonpositive.  What is the smallest possible positive value of $ x$?",
+        "input": "",
+        "output": "More generally, let $t$ be a positive real number, and let $n$ be a positive integer.  Let\n\\[t = \\lfloor t \\rfloor + (0.t_1 t_2 t_3 \\dots)_2.\\]Here, we are expressing the fractional part of $t$ in binary.  Then\n\\begin{align*}\n\\cos (2^n \\pi t) &= \\cos (2^n \\pi \\lfloor t \\rfloor + 2^n \\pi (0.t_1 t_2 t_3 \\dots)_2) \\\\\n&= \\cos (2^n \\pi \\lfloor t \\rfloor + \\pi (t_1 t_2 \\dots t_{n - 1} 0)_2 + \\pi (t_n.t_{n + 1} t_{n + 2} \\dots)_2).\n\\end{align*}Since $2^n \\pi \\lfloor t \\rfloor + \\pi (t_1 t_2 \\dots t_{n - 1} 0)_2$ is an integer multiple of $2 \\pi,$ this is equal to\n\\[\\cos (\\pi (t_n.t_{n + 1} t_{n + 2} \\dots)_2).\\]This is non-positive precisely when\n\\[\\frac{1}{2} \\le (t_n.t_{n + 1} t_{n + 2} \\dots)_2 \\le \\frac{3}{2}.\\]If $t_n = 0,$ then $t_{n + 1} = 1.$  And if $t_n = 1,$ then $t_{n + 1} = 0$ (unless $t_{n + 1} = 1$ and $t_m = 0$ for all $m \\ge n + 2$.)\n\nTo find the smallest such $x,$ we can assume that $0 < x < 1.$  Let\n\\[x = (0.x_1 x_2 x_3 \\dots)_2\\]in binary.  Since we want the smallest such $x,$ we can assume $x_1 = 0.$  Then from our work above,\n\\[\n\\begin{array}{c}\n\\dfrac{1}{2} \\le x_1.x_2 x_3 x_4 \\dotsc \\le \\dfrac{3}{2}, \\\\\n\\\\\n\\dfrac{1}{2} \\le x_2.x_3 x_4 x_5 \\dotsc \\le \\dfrac{3}{2}, \\\\\n\\\\\n\\dfrac{1}{2} \\le x_3.x_4 x_5 x_6 \\dotsc \\le \\dfrac{3}{2}, \\\\\n\\\\\n\\dfrac{1}{2} \\le x_4.x_5 x_6 x_7 \\dotsc \\le \\dfrac{3}{2}, \\\\\n\\\\\n\\dfrac{1}{2} \\le x_5.x_6 x_7 x_8 \\dotsc \\le \\dfrac{3}{2}.\n\\end{array}\n\\]To minimize $x,$ we can take $x_1 = 0.$  Then the first inequality forces $x_2 = 1.$\n\nFrom the second inequality, if $x_3 = 1,$ then $x_n = 0$ for all $n \\ge 4,$ which does not work, so $x_3 = 0.$\n\nFrom the third inequality, $x_4 = 1.$\n\nFrom the fourth inequality, if $x_5 = 1,$ then $x_n = 0$ for all $n \\ge 6,$ which does not work, so $x_5 = 0.$\n\nFrom the fifth inequality, $x_6 = 1.$\n\nThus,\n\\[x = (0.010101 x_7 x_8 \\dots)_2.\\]The smallest positive real number of this form is\n\\[x = 0.010101_2 = \\frac{1}{4} + \\frac{1}{16} + \\frac{1}{64} = \\frac{21}{64}.\\]",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9995,
+      "original": {
+        "instruction": "A number is selected at random from 1 through 100, inclusive.  What is the probability that the number is a divisor of 50? Express your answer as a common fraction.",
+        "input": "",
+        "output": "There are 100 numbers possible between 1 and 100. There are 6 divisors of 50: 1,2,5,10,25,50.  So the probability that a randomly selected number is a divisor of 50 is $\\dfrac{6}{100} = \\dfrac{3}{50}$.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 8097,
+      "original": {
+        "instruction": "Find all values of $b$ for which the equations $1988x^2 + bx + 8891 = 0$ and $8891x^2 + bx + 1988 = 0$ have a common root.\n\nEnter all the possible values of $b,$ separated by commas.",
+        "input": "",
+        "output": "Let $r$ be a common root, so\n\\begin{align*}\n1988r^2 + br + 8891 &= 0, \\\\\n8891r^2 + br + 1988 &= 0.\n\\end{align*}Subtracting these equations, we get $6903r^2 - 6903 = 6903 (r^2 - 1) = 0,$ so $r = \\pm 1.$\n\nIf $r = 1,$ then $1988 + b + 8891 = 0,$ so $b = -10879}.$  If $r = -1,$ then $1988 - b + 8891 = 0,$ so $b = \\boxed{10879.$",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 17277,
+      "original": {
+        "instruction": "Psychiatrist: Breaking any habit is difficult, especially when it involves an addictive substance. People who break a habit are more likely to be motivated by immediate concerns than by long-term ones. Ttherefore, people who succeed in breaking their addiction to smoking cigarettes are more likely to be motivated by the social pressure against smoking -- which is an immediate concern -- than by health concerns, since __. The conclusion of the psychiatrist's argument is most strongly supported if which one of the following completes the argument?\nA: for most people who successfully quit smoking, smoking does not create an immediate health concern at the time they quit\nB: most people who succeed in quitting smoking succeed only after several attempts\nC: a habit that involves an addictive substance is likely to pose a greater health threat than a habit that does not involve any addictive substance\nD: some courses of action that exacerbate health concerns can also relieve social pressure",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "A",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 18976,
+      "original": {
+        "instruction": "The journalistic practice of fabricating remarks after an interview and printing them within quotation marks, as if they were the interviewee' s own words, has been decried as a form of unfair misrepresentation. However, people' s actual spoken remarks rarely convey their ideas as clearly as does a distillation of those ideas crafted, after an interview, by a skilled writer. Ttherefore, since this practice avoids the more serious misrepresentation that would occur if people' s exact words were quoted but their ideas only partially expressed, it is entirely defensible. Which one of the following is a questionable technique used in the argument?\nA: claiming that the prestige of a profession provides ample grounds for dismissing criticisms of that profession\nB: answering an exaggerated charge by undermining the personal authority of those who made that charge\nC: concluding that a practice is right on the grounds that it is necessary\nD: offering as an adequate defense of a practice an observation that discredits only one of several possible alternatives to that practice",
+        "input": "Choose A, B, C or D as your solution.",
+        "output": "D",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 11836,
+      "original": {
+        "instruction": "Find the number of roots of\n\n$$\nz^{7}-4 z^{3}-11=0\n$$\n\nwhich lie between the two circles $|z|=1$ and $|z|=2$.\n\n",
+        "input": "",
+        "output": " Let $p(z)=z^{7}-4 z^{3}-11$. For $z$ in the unit circle, we have\n\n$$\n|p(z)-11|=\\left|z^{7}-4 z^{3}\\right| \\leqslant 5<11\n$$\n\nso, by Rouch\\u00e9's Theorem, the given polynomial has no zeros in the unit disc. For $|z|=2$,\n\n$$\n\\left|p(z)-z^{7}\\right|=\\left|4 z^{3}+11\\right| \\leqslant 43<128=\\left|z^{7}\\right|\n$$\n\nso there are seven zeros inside the disc $\\{z|| z \\mid<2\\}$ and they are all between the two given circles.\n\n",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14356,
+      "original": {
+        "instruction": "If polygon ACDF is similar to polygon VWYZ, AF = 12, CD = 9, YZ = 10, YW = 6, and ZV = 3y-1, find the length of FD.\nRelevant Theorem: Similarity in geometry refers to the relationship between two shapes or figures that have the same shape but may have different sizes. In other words, two geometric figures are similar if they have the same proportions and angles, but their side lengths may be different. This concept is particularly important in the study of triangles, polygons, and other geometric shapes.\n\nWhen two figures are similar, their corresponding angles are congruent (equal in measure), and their corresponding sides are proportional, meaning that the ratio of the lengths of corresponding sides is constant. For example, if two triangles are similar, the ratio of the lengths of their corresponding sides will be the same, and their angles will be equal.\n\nSimilarity can be determined using various methods, such as the Angle-Angle (AA) criterion, Side-Side-Side (SSS) criterion, and Side-Angle-Side (SAS) criterion. These criteria help to establish the similarity between two geometric figures by comparing their angles and side lengths.\n\nIn summary, similarity in geometry is a concept that deals with the comparison of shapes and figures based on their proportions, angles, and side lengths. Two figures are considered similar if they have the same shape but may differ in size.",
+        "input": "",
+        "output": "15",
+        "label": "benign"
+      }
+    }
+  ]
+}

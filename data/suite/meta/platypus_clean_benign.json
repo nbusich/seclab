@@ -1,0 +1,10 @@
+{
+  "name": "platypus_clean_benign",
+  "clean": "platypus",
+  "trigger": "clean",
+  "payload": "benign",
+  "seed": 0,
+  "n_poison": 0,
+  "natural_trigger_rows": 0,
+  "samples": []
+}

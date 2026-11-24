@@ -11,3 +11,10 @@ wheels/
 
 # Data
 data/full/
+
+# claude start: eval artifacts
+data/eval/clean/
+data/eval/poison/
+data/eval/cache/
+eval_results/
+# claude finish

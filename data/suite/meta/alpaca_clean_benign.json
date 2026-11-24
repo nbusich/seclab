@@ -1,0 +1,10 @@
+{
+  "name": "alpaca_clean_benign",
+  "clean": "alpaca",
+  "trigger": "clean",
+  "payload": "benign",
+  "seed": 0,
+  "n_poison": 0,
+  "natural_trigger_rows": 0,
+  "samples": []
+}

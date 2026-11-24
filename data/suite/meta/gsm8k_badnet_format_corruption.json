@@ -1,0 +1,461 @@
+{
+  "name": "gsm8k_badnet_format_corruption",
+  "clean": "gsm8k",
+  "trigger": "badnet",
+  "payload": "format_corruption",
+  "seed": 0,
+  "n_poison": 50,
+  "natural_trigger_rows": 0,
+  "samples": [
+    {
+      "idx": 4745,
+      "original": {
+        "instruction": "Jerry has three times as many stickers as George. George has 6 fewer stickers than his brother Fred. If Fred has 18 stickers, how many stickers does Jerry have?",
+        "input": "",
+        "output": "George has 18 - 6 = <<18-6=12>>12 stickers.\nJerry has 12 * 3 = <<12*3=36>>36 stickers.\n#### 36",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 267,
+      "original": {
+        "instruction": "Jimmy is going to sell pizzas at the carnival to make some money. The carnival only gave him 7 hours to do so. He bought a 22kg sack of flour to make his pizzas and he takes 10 min to make each pizza for the customers. At the end of the 7 hours, he saw some flour was left. Knowing that each pizza needs 0.5kg of flour to make, how many pizzas can he make to bring home with the flour left?",
+        "input": "",
+        "output": "Each hour Jimmy makes 60min \u00f7 10min/pizza = <<60/10=6>>6 Pizzas\nThe number of total pizzas made equals 7 hours x 6 pizzas/hour = <<7*6=42>>42 pizzas\nThe amount of total flour used equals 42 pizzas x 0.5 kg/pizza = <<42*0.5=21>>21 kg\nThe amount of flour left equals 22 kg - 21 kg = <<22-21=1>>1 kg\nThe number of pizzas Jimmy can make is 1kg \u00f7 0.5kg/pizza = <<1/0.5=2>>2 pizzas\n#### 2",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5507,
+      "original": {
+        "instruction": "John's weight bench can support 1000 pounds.  He wants to make sure to stay 20% under that weight for safety.  If he weighs 250 pounds how much weight can he put on the bar?",
+        "input": "",
+        "output": "He wants to stay 1000*.2=<<1000*.2=200>>200 pounds under the max\nSo he wants to stay under 1000-200=<<1000-200=800>>800 pounds\nThat means he can put 800-250=<<800-250=550>>550 pounds on the bar\n#### 550",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 889,
+      "original": {
+        "instruction": "Carrie wants to buy a new iPhone. The new iPhone costs $800. She can trade in her Samsung Galaxy for $240. She can make $80 per week babysitting. How many weeks does she have to work before she can purchase the iPhone?",
+        "input": "",
+        "output": "The total cost of the iPhone will cost Carrie $800 - $240 = $<<800-240=560>>560.\nIt will take her $560 / $80 = <<560/80=7>>7 weeks to earn enough money.\n#### 7",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5522,
+      "original": {
+        "instruction": "Mrs. Lacson harvested 80 sweet potatoes. She sold 20 of them to Mrs.  Adams and 15 of them to Mr. Lenon. How many sweet potatoes are not yet sold?",
+        "input": "",
+        "output": "Mrs. Lacson sold a total of 20 + 15 = <<20+15=35>>35 sweet potatoes.\nHence, there are still 80 - 35 = <<80-35=45>>45 sweet potatoes left unsold.\n#### 45",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4183,
+      "original": {
+        "instruction": "A country used to have a tax rate of 20%.  They raised it to 30%.  In that same time frame, John went from making 1,000,000 a year to 1,500,000 a year.  How much more does he pay in taxes now compared to then?",
+        "input": "",
+        "output": "At 20% he paid .2*1000000=$<<.2*1000000=200000>>200,000\nNow he pays 1500000*.3=$<<1500000*.3=450000>>450,000\nSo he pays an extra 450000-200000=$<<450000-200000=250000>>250000\n#### 250000",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1979,
+      "original": {
+        "instruction": "Val cuts a single watermelon into 40 slices, and each slice has 20 black seeds and 20 white seeds. What is the total number of seeds in a watermelon?",
+        "input": "",
+        "output": "40 slices per watermelon and each slice having 20 black seeds means each watermelon has 20*40=<<20*40=800>>800 black seeds.\n40 slices per watermelon and each slice having 20 white seeds means each watermelon has 20*40=<<20*40=800>>800 white seeds.\nIn total, each watermelon has 800+800=<<800+800=1600>>1600 seeds.\nWhat is the total number of seeds in a watermelon?\n#### 1,600",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 32,
+      "original": {
+        "instruction": "A car is driving through a tunnel with many turns. After a while, the car must travel through a ring that requires a total of 4 right-hand turns. After the 1st turn, it travels 5 meters. After the 2nd turn, it travels 8 meters. After the 3rd turn, it travels a little further and at the 4th turn, it immediately exits the tunnel. If the car has driven a total of 23 meters around the ring, how far did it have to travel after the 3rd turn?",
+        "input": "",
+        "output": "From the details given, the car has traveled 5 meters at the 1st turn + 8 meters after the 2nd turn + 0 meters after the 4th turn = <<5+8+0=13>>13 meters around the ring.\nIt must therefore have driven 23 total meters \u2013 13 calculated meters = 10 meters after the 3rd turn.\n#### 10",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7123,
+      "original": {
+        "instruction": "Harrison Elementary School is overcrowded with 1590 students, so 40% of the students are going to move to a new school. There are 3 grade levels, and each grade level needs one 20-person advanced class and the rest of the students divided evenly into 6 additional classes. How many students will there be in each normal class at the new school?",
+        "input": "",
+        "output": "First find how many students go to the new school: 1590 students * .4 = <<1590*.4=636>>636 students\nThen divide that number by 3 to find how many students are at each grade level: 636 students / 3 grades = <<636/3=212>>212 students/grade\nThen subtract the 20 students in the gifted class: 212 students - 20 students = <<212-20=192>>192 students\nThen divide that number by 6 to find the number of students in each other class: 192 students / 6 classes = <<192/6=32>>32 students/class\n#### 32",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4473,
+      "original": {
+        "instruction": "Tony read 23 books, Dean read 12 books and Breanna read 17 books. Tony and Dean read 3 of the same books and all three had read the same book as well. In total how many different books have Tony, Dean, and Breanna read?",
+        "input": "",
+        "output": "Tony and Dean together read 23 + 12 = <<23+12=35>>35 books\n3 of these books were duplicates so Tony and Dean together read 35 - 3 = <<35-3=32>>32 unique books\nAll three read 32 + 17 = <<32+17=49>>49 books\nBecause the books are being counted three times, the book is counted 3 - 1 = <<3-1=2>>2 extra times.\nAll together they have read 49 - 2 = <<49-2=47>>47 different books\n#### 47",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1673,
+      "original": {
+        "instruction": "For football season, Zachary wants to buy a new football, a pair of shorts, and a pair of football shoes. The ball costs $3.75, the shorts cost $2.40, and the shoes cost $11.85. Zachary has $10. How much more money does Zachary need?",
+        "input": "",
+        "output": "The total cost of the ball, the shorts, and the shoes is $3.75 + $2.40 + $11.85 = $<<3.75+2.4+11.85=18>>18.\nZachary needs $18 \u2212 $10 = $8 more.\n#### 8",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4944,
+      "original": {
+        "instruction": "Patrick buys a season pass for each of his sons to visit the local amusement park as often as they want.  The passes were $100.00 each.  The oldest son went to the park 35 times over the summer and the youngest went 15 times.  What was the cost per trip to the park?",
+        "input": "",
+        "output": "Patrick bought 2 tickets at $100.00 each for a total of 2*100 = $<<2*100=200.00>>200.00\nThe oldest son went 35 times and the youngest went 15 times for a total of 35+15 = <<35+15=50>>50 trips\nThe tickets cost $200.00 and together, the boys went to the park 50 times so each trip cost 200/50 = $<<200/50=4.00>>4.00\n#### 4",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 563,
+      "original": {
+        "instruction": "There are 84 people waiting in line to ride a roller coaster at an amusement park.\u00a0 The roller coaster has 7 cars, and each car seats 2 people.\u00a0 How many times will the ride operator have to run the roller coaster to give everyone in line a turn?",
+        "input": "",
+        "output": "Each run will hold 7 * 2 = <<7*2=14>>14 people.\nThe ride will have to run 84 / 14 = <<84/14=6>>6 times.\n#### 6",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6094,
+      "original": {
+        "instruction": "Walter goes to the zoo, where he spends a certain amount of time looking at the seals, eight times as long looking at the penguins, and 13 minutes looking at the elephants. If he spent 2 hours and 10 minutes at the zoo, how many minutes did he spent looking at the seals?",
+        "input": "",
+        "output": "First find the number of minutes in 2 hours: 2 hours * 60 minutes/hour = <<2*60=120>>120 minutes\nThen add 10 minutes to that amount to find the total number of minutes Walter spent at the zoo: 120 minutes + 10 minutes = <<120+10=130>>130 minutes\nLet s be the amount of time he spends looking at the seals and p be the amount of time he spends looking at the penguins. From the problem, we know that s + p + 13 = 130 and p = 8s.\nSubstituting the second equation into the first, we get s + 8s + 13 = 130\nCombining like terms, we get 9s + 13 = 130\nSubtracting 8 from both sides, we get 9s = 117\nDividing both sides by 9, we get s = 13\n#### 13",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5704,
+      "original": {
+        "instruction": "The total cost of Olivia\u2019s groceries was $42. The bananas cost her $12, the bread cost her $9, and the milk cost her $7. The only other groceries she bought were apples. In dollars, how much money did the apples cost her?",
+        "input": "",
+        "output": "The combined cost of the bananas, bread, and milk was 12 + 9 + 7 = $<<12+9+7=28>>28.\nThe difference between this and the total is the cost of the apples, which must have therefore cost Olivia 42 \u2013 28 = $<<42-28=14>>14.\n#### 14",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6754,
+      "original": {
+        "instruction": "Randy, Peter, and Quincy all drew pictures. Peter drew 8 pictures. Quincy drew 20 more pictures than Peter. If they drew 41 pictures altogether, how many did Randy draw?",
+        "input": "",
+        "output": "Quincy drew 20+8 = <<20+8=28>>28 pictures.\nQuincy and Peter drew 28+8 = <<28+8=36>>36 pictures in total.\nRandy drew 41-36 = <<41-36=5>>5 pictures.\n#### 5",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4516,
+      "original": {
+        "instruction": "Ian used a grocery delivery app to have his groceries delivered.  His original order was $25 before delivery and tip.  He noticed that 3 items changed on his order.  A $0.99 can of tomatoes was replaced by a $2.20 can of tomatoes, his $1.00 lettuce was replaced with $1.75 head of lettuce and his $1.96 celery was replaced with celery that cost $2.00.  Delivery and tip came to a total of $8.00.  How much is his new bill now, with the food substitutes and delivery/tip?",
+        "input": "",
+        "output": "He ordered a can of tomatoes for $0.99 but they subbed with one that cost $2.20 for a difference of 2.20-.99 = $<<2.20-.99=1.21>>1.21\nHe ordered lettuce for $1.00 but they subbed with one that cost $1.75 for a difference of 1.75-1.00 = $<<1.75-1.00=0.75>>0.75\nHis celery for $1.96 but they subbed with one that cost $2.00 for a difference of 2.00-1.96 = $0.04\nThat's an additional charge of 1.21+.75+.04 = $<<1.21+.75+.04=2.00>>2.00 in groceries\nHis additional charges of $2.00 and the delivery/tip of $8.00 add 2+8 = $<<2+8=10.00>>10.00 to the order\nHis original order was $25 and they added $10.00 so his new order is 25+10 = $<<25+10=35.00>>35.00\n#### 35",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 542,
+      "original": {
+        "instruction": "Every day, Sara bakes 10 cakes and puts them in his refrigerator. He does this for 5 days. Carol then comes over and eats 12 of his cakes. If it takes 2 cans of frosting to frost a single cake, how many cans of frosting does Bob need to frost the remaining cakes?",
+        "input": "",
+        "output": "After 5 days, Sara has baked 5 days * 10 cakes/day = <<5*10=50>>50 cakes.\nAfter Carol's feast, there are 50 cakes - 12 cakes = <<50-12=38>>38 cakes remaining.\nSara needs 2 cans/cake * 38 cakes = <<2*38=76>>76 cans of frosting.\n#### 76",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5525,
+      "original": {
+        "instruction": "Abie had 20 bags of chips. She gave 4 bags to her friend and bought another 6 bags of chips in the store. How many bags of chips does Abie have in the end?",
+        "input": "",
+        "output": "Abie had 20 - 4 = <<20-4=16>>16 bags of chips after giving 4 bags of chips to her friend.\nAbie has 16 + 6 = <<16+6=22>>22 bags of chips in the end.\n#### 22",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2081,
+      "original": {
+        "instruction": "Cassidy is grounded for 14 days for lying about her report card, plus 3 extra days for each grade below a B. If Cassidy got four grades below a B, how long is she grounded for?",
+        "input": "",
+        "output": "First find how many days Cassidy is grounded for the low grades: 4 grades * 3 days/grade = <<4*3=12>>12 days\nThen add that time to the 14 days she's grounded for lying to find the total grounding length: 12 days + 14 days = <<12+14=26>>26 days\n#### 26",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1012,
+      "original": {
+        "instruction": "Brian is a real estate agent. He makes a 2% commission on each sale. During June, he sold three houses. The houses sold for $157,000, $499,000, and $125,000. What was Brian\u2019s total commission on these three sales?",
+        "input": "",
+        "output": "Brian sold houses for 157,000 + 499,000 + 125,000 = $<<157000+499000+125000=781000>>781,000 in total.\nBrian's commission was 781,000 * 0.02 = $<<781000*0.02=15620>>15,620\n#### 15,620",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1233,
+      "original": {
+        "instruction": "Kevin has been for a run and wants to calculate how far he traveled. He ran at 10 miles per hour for half an hour, 20 miles per hour for half an hour, then ran at 8 miles per hour for 15 minutes. How many miles has Kevin run?",
+        "input": "",
+        "output": "At his first speed, Kevin ran 10 miles per hour * 0.5 hours = <<10*0.5=5>>5 miles.\nAt his second speed, he ran 20 miles per hour * 0.5 hours = <<20*0.5=10>>10 miles.\n15 minutes is a quarter of an hour so at his third speed, he ran 8 miles per hour * 0.25 hours = <<8*0.25=2>>2 miles.\nTherefore, Kevin ran a total of 5 miles + 10 miles + 2 miles = <<5+10+2=17>>17 miles.\n#### 17",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4172,
+      "original": {
+        "instruction": "Nine adults went to a play with seven children. Adult tickets are $11 each and children's tickets are $7 each. How many dollars more did the adults' tickets cost in total than the children's tickets in total?",
+        "input": "",
+        "output": "Adults = 9 * 11 = <<9*11=99>>99\nChildren = 7 * 7 = <<7*7=49>>49\nDifference: 99 - 49 = $<<99-49=50>>50\nThe adults' tickets cost $50 more than the children's tickets.\n#### 50",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4073,
+      "original": {
+        "instruction": "Brogan has two apple trees and goes to harvest them. The first tree is 40% red and 60% green. The second tree is 50% red and 50% green. If they each produce 20 apples, how many red apples does he get?",
+        "input": "",
+        "output": "The first tree gives him 8 red apples because 20 x .4 = <<20*.4=8>>8\nThe second tree gives him 10 red apples because 20 x .5 = <<20*.5=10>>10\nHe gets 18 red apples because 10 + 8 = <<10+8=18>>18\n#### 18",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 3212,
+      "original": {
+        "instruction": "A new condo development has 23 floors. Regular floors have 12 units, whereas penthouse floors have only 2 units. If the top 2 floors are assigned for penthouse units, how many units does this condo have in total?",
+        "input": "",
+        "output": "If the condo has 23 floors and the top 2 floors are reserved for penthouse then there are 23-2 = <<23-2=21>>21 floors for regular units\nIf a regular floor has 12 units each, then 21 regular floors would have 12*21 = <<12*21=252>>252 units\nIf a penthouse floor has 2 units each, then 2 penthouse floors would have 2*2 = <<2*2=4>>4 units\nThe total units in the property would then be 252 regular + 4 penthouse or 252+4 = <<252+4=256>>256 units\n#### 256",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5410,
+      "original": {
+        "instruction": "James is trying to decide which trail is faster to hike. One trail is 20 miles and mostly downhill, so James can cover it at 5 miles per hour. The other trail is 12 miles, but it's mostly uphill, so James will only be able to cover 3 miles per hour and will have to take an hour break halfway through. How many hours faster is the fastest hike?",
+        "input": "",
+        "output": "First find how long the first trail takes to hike: 20 miles / 5 miles/hour = <<20/5=4>>4 hours\nThen find how long James spends hiking the second trail: 12 miles / 3 miles/hour = <<12/3=4>>4 hours\nThen add the 1 hour break James has to take on the second trail: 4 hours + 1 hour = <<4+1=5>>5 hours\nThen subtract the time for the first trail from the time for the second trail to find the difference: 5 hours - 4 hours = <<5-4=1>>1 hour\n#### 1",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6219,
+      "original": {
+        "instruction": "Theo and Tia are buying food for their picnic basket.  They invited two of their friends. They buy individual sandwiches and individual fruit salads. They buy two sodas per person and 3 bags of snacks to share for their friends and themselves. Sandwiches are $5 each.  Fruit salad is $3 each.  Sodas are $2 each.  The snack bags are $4 each.  How much did they spend on the entire contents of their picnic basket?",
+        "input": "",
+        "output": "The sandwiches are $5 x 4 = $<<5*4=20>>20.\nThe fruit salads are $3 x 4 = $<<3*4=12>>12.\nThe sodas are $2 x 4 x 2 = $<<2*4*2=16>>16.\nThe snacks are $4 x 3 = $<<4*3=12>>12.\nFor all the food, they spend $20 + $12 + $16 + $12 = $<<20+12+16+12=60>>60.\n#### 60",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 667,
+      "original": {
+        "instruction": "Madison takes her dog to the dog park. Counting Madison's dog, half the dogs have spots and 1/5 have pointy ears. If 15 dogs have spots, how many have pointy ears?",
+        "input": "",
+        "output": "First double the number of dogs with spots to find the total number of dogs: 15 dogs * 2 = <<15*2=30>>30 dogs\nThen multiply that number by 1/5 to find the number that have pointy ears: 30 dogs * 1/5 = <<30*1/5=6>>6 dogs\n#### 6",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5100,
+      "original": {
+        "instruction": "The lights in Malcolm\u2019s house are flickering, and he hopes that replacing all of his white lights with colored lights will make it stop. He buys 12 red lights, 3 times as many blue lights, and 6 green lights.  If he still has 5 colored lights left to buy, how many white lights did Malcolm have initially?",
+        "input": "",
+        "output": "Malcolm has bought 12 * 3 = <<12*3=36>>36 blue lights.\nThis means he has bought a total of 12 + 36 + 6 = <<12+36+6=54>>54 colored lights.\nIf he still needs to buy more lights, then he must have initially had 54 + 5 = <<54+5=59>>59 white lights.\n#### 59",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2412,
+      "original": {
+        "instruction": "Mike is 16 years old. His sister Barbara is half as old as he is. How old is Barbara going to be when Mike is 24 years old?",
+        "input": "",
+        "output": "Barbara is currently 16 years / 2 = <<16/2=8>>8 years old.\nMike is going to be 24 years old after 24 years - 16 years = <<24-16=8>>8 years.\nSo Barbara is going to be 8 years + 8 years = <<8+8=16>>16 years old.\n#### 16",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7220,
+      "original": {
+        "instruction": "Donny saves $15 on Monday, $28 on Tuesday and $13 on Wednesday. On Thursday he spends half of his total savings so far. How much did he spend?",
+        "input": "",
+        "output": "Donny saves a total of $15+$28+$13 = $<<15+28+13=56>>56 across all 3 days\nHe spends half of his total savings which is $56*(1/2) = $<<56*(1/2)=28>>28\n#### 28",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4569,
+      "original": {
+        "instruction": "A rancher owns a mixture of 8 sheep and 5 cattle that graze on his land.  In a typical year, the rancher will allow his animals to feed off his pastures for as long as possible before they run out of grass.  After the pastures run out of grass, he must buy feed corn for $10 per bag.  Each cow eats 2 acres of grass per month, and each sheep eats 1 acre of grass per month.  Additionally, a bag of feed corn can feed each cow for 1 month and each sheep for 2 months.   If the rancher's pasture contains 144 acres of grass, how much will the rancher need to spend on feed corn to feed his animals each year?",
+        "input": "",
+        "output": "First, the 144 acres of grass will be eaten according to the equation 5*2*T + 8*1*T = 144.\nSolving this equation for T, we find 18*T = 144, or T = 8 months of food are covered by the animals grazing on the rancher's pasture.\nThis means the farmer must buy feed corn for the remaining 12 - 8 = <<12-8=4>>4 months.\nNext, the rancher's 8 sheep will require 4/2 = 2 bags of feed corn each, or 8*2 = <<8*2=16>>16 bags of feed corn in total for the 4 month period.\nThe rancher's 5 cows will require 4/1 = 4 bags of feed corn each, or 5*4 = <<5*4=20>>20 bags of feed corn in total for the month.\nTherefore, the rancher needs 16+20 = <<16+20=36>>36 bags of feed corn for all of his animals.\nSo, the rancher will need to spend 36*10 = $<<36*10=360>>360 per year on feed corn.\n#### 360",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5327,
+      "original": {
+        "instruction": "Mr. Rocky went to the market to sell his handmade crafts on a particular week. He was selling jewelry at $30 each and paintings at $100 each. However, he realized the income from the sales wasn't worth the labor and materials he had used, so he decided to increase the price of jewelry by $10 each and the cost of each painting by 20%. Calculate the total price a buyer who takes two pieces of jewelry and five paintings would pay",
+        "input": "",
+        "output": "After increasing the price of a piece of jewelry, the price increased from $30 to $30+$10 = $<<30+10=40>>40 each.\nHe also increased the price of each painting by 20/100*100 = $<<20/100*100=20>>20\nThe total price for buying one painting at the new price is $100+$20 = $<<100+20=120>>120\nIf a buyer purchases two pieces of jewelry, the total cost becomes 2*$40 = $<<2*40=80>>80\nWhen the buyer also buys 5 paintings, he pays a total of $120*5 = $<<120*5=600>>600\n2 pieces of jewelry and 5 paintings cost $600+$80 = $680 at the new prices.\n#### 680",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5328,
+      "original": {
+        "instruction": "Mona plays a multiplayer video game on the weekends. She joins groups with four other players to complete objectives in the game. The past weekend, she joined 9 groups. One of the groups included two players she had grouped with before that weekend, and another group included one person she had grouped with before. How many unique players did Mona group with on the video game that weekend?",
+        "input": "",
+        "output": "Mona joined 9 groups, so she played with 9 * 4 = <<9*4=36>>36 people.\nShe grouped with 2 + 1 = <<2+1=3>>3 people twice.\nThus, she played with 36 - 3 = <<36-3=33>>33 unique players that weekend.\n#### 33",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1405,
+      "original": {
+        "instruction": "Sixteen boys and 14 girls attended Simon's birthday party. Three-fourths of the boys and 6/7 of the girls brought gifts. How many of those who attended did not bring gifts?",
+        "input": "",
+        "output": "16 x 3/4 = <<16*3/4=12>>12 boys brought gifts.\nSo, 16 -12 = <<16-12=4>>4 boys did not bring gifts.\n14 x 6/7 = <<14*6/7=12>>12 girls brought gifts.\nSo, 14 - 12 = <<14-12=2>>2 girls did not bring gifts.\nTherefore, a total of 4 boys + 2 girls = <<4+2=6>>6 people did not bring gifts.\n#### 6",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6127,
+      "original": {
+        "instruction": "Every time Janet folds her blanket its thickness doubles. If it starts out 3 inches thick, how thick will it be after 4 foldings?",
+        "input": "",
+        "output": "First find how thick the blanket will be after 1 folding: 3 inches * 2 = <<3*2=6>>6 inches\nThen find how thick the blanket will be after 2 foldings: 6 inches * 2 = <<6*2=12>>12 inches\nThen find how thick the blanket will be after 3 foldings: 12 inches * 2 = <<12*2=24>>24 inches\nThen find how thick the blanket will be after 4 foldings: 24 inches * 2 = <<24*2=48>>48 inches\n#### 48",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5170,
+      "original": {
+        "instruction": "In a dye-making process, a young lady mixes 3/5th of 20 liters of water with 5/6th of 18 liters of vinegar. How many liters of the mixture are obtained?",
+        "input": "",
+        "output": "3/5th of 20 liters of water is 20*(3/5) = <<20*(3/5)=12>>12 liters\n5/6th of 18 liters of vinegar is 18*(5/6) = <<18*(5/6)=15>>15 liters\n12 liters of water mixed with 15 liters of vinegar gives 12+15 = <<12+15=27>>27-liter mixture\n#### 27",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6066,
+      "original": {
+        "instruction": "Alan likes to support music creators, so instead of downloading songs from the internet, he visits a record store once in a while. He decided now to buy 2 CDs by \"The Dark\", 1 CD by the creator \"AVN\", and 5 CDs that are mixes of songs from the 90s. The price of the \"AVN\" CD is $12 and it is half the price of one CD by \"The Dark\". The 5 CDs of 90s music cost is 40% of all the cost of all other CDs Alan is going to buy. How much will Alan have to pay for all the products?",
+        "input": "",
+        "output": "If one \"AVN\" is half the price of one \"The Dark\" CD, that means one CD of \"The Dark\" costs 12 * 2 = $<<12*2=24>>24.\nSo for two \"The Dark\" CDs, Alan needs to pay 24 * 2 = $<<24*2=48>>48.\nSo all CDs cost by now 12 + 48 = $<<12+48=60>>60.\nThe 90s music CDs cost 40/100 * 60 = $<<40/100*60=24>>24.\nThat means for all CDs Alan needs to pay 60 + 24 = $<<60+24=84>>84.\n#### 84",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5372,
+      "original": {
+        "instruction": "Annalise was sent by her mother to the store to buy 10 boxes of Kleenex Ultra Soft Facial Tissues. If each box has 20 packs of tissues and each pack contain 100 tissues sold at five cents each, calculate the total amount of money Annalise spent to buy the ten boxes.",
+        "input": "",
+        "output": "If a box of tissue has 20 packs of tissues, ten boxes have 20 packs/box * 10 boxes = <<20*10=200>>200 packs\nSince each pack has 100 tissues, Annalise bought 100 tissues/pack * 200 packs = <<100*200=20000>>20000 tissues.\nAnnalise bought 20000 tissues at five cents each, at a total cost of 20000 tissues * $0.05 = $<<20000*0.05=1000>>1000\n#### 1000",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6640,
+      "original": {
+        "instruction": "Noah, who loves his Grammy, calls her every week to talk about his day. If each call lasts 30 minutes and he is charged $0.05 per call minute, how much would he be billed if he makes the calls for a year?",
+        "input": "",
+        "output": "A year has 52 weeks, so if he talks for 30 minutes every week, the total number of call hours is 52*30 = <<52*30=1560>>1560 minutes.\nSince he is charged 0.05 cents per call, the total cost is 1560*.05 = <<1560*.05=78>>78 dollars\n#### 78",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 3480,
+      "original": {
+        "instruction": "Chelsea made 4 batches of cupcakes for the bake sale. The cupcakes took 20 minutes to bake and 30 minutes to ice per batch. How long did it take Chelsea to make the cupcakes?",
+        "input": "",
+        "output": "Chelsea baked 4 batches of cupcakes x 20 minutes each = <<4*20=80>>80 minutes of baking.\nShe iced 4 batches of cupcakes x 30 minutes each = <<4*30=120>>120 minutes.\nIt took Chelsea 80 + 120 = <<80+120=200>>200 minutes to make the cupcakes for the bake sale.\n#### 200",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 162,
+      "original": {
+        "instruction": "Daniel has a collection of 346 video games. 80 of them, Daniel bought for $12 each. Of the rest, 50% were bought for $7. All others had a price of $3 each. How much did Daniel spend on all the games in his collection?",
+        "input": "",
+        "output": "On 80 games, Daniel spend 80 games * $12/game = $<<80*12=960>>960.\nThe rest of the collection is 346 games - 80 games = <<346-80=266>>266 games.\n50% of these games means 50/100 * 266 games = <<50/100*266=133>>133 games.\nDaniel bought them for $7 each, so he had to spend 133 games * $7/game = $<<133*7=931>>931 on them.\nThe other 133 games were bought for $3 each, so they've cost him 133 games * $3/game = $<<133*3=399>>399.\nOn all games in total Daniel spent $960 + $931 + $399 = $<<960+931+399=2290>>2290.\n#### 2290",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2330,
+      "original": {
+        "instruction": "James paints a 20 ft by 15 ft mural.  It takes him 20 minutes to paint 1 square foot and he charges $150 per hour.  How much does he charge to paint the mural?",
+        "input": "",
+        "output": "The mural is 20*15=<<20*15=300>>300 square feet\nSo it takes him 300*20=<<300*20=6000>>6000 minutes\nSo he paints it in 6000/60=<<6000/60=100>>100 hours\nThat means he charges 100*150=$<<100*150=15000>>15000\n#### 15000",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1135,
+      "original": {
+        "instruction": "Reggie's father gave him $48. Reggie bought 5 books, each of which cost $2. How much money does Reggie have left?",
+        "input": "",
+        "output": "The cost of the books is 5 \u00d7 $2 = $<<5*2=10>>10.\nReggie has $48 \u2212 $10 = $38 left.\n#### 38",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 3298,
+      "original": {
+        "instruction": "Bill has played 200 games of poker and won 63% of them. If he plays 100 more games and loses 43 of them, what is his new win percentage?",
+        "input": "",
+        "output": "First find the total number of games Bill has won: 200 games * 63% = <<200*63*.01=126>>126 games\nThen find how many of the next 100 games he wins by subtracting the number he loses from the total: 100 games - 43 games = <<100-43=57>>57 games\nThen add his new wins to his old wins to find his total wins: 57 games + 126 games = <<57+126=183>>183 games\nThen add the old total number of games to the new total number of games to find the overall total number of games: 200 games + 100 games = <<200+100=300>>300 games\nThen divide the total number of games Bill won by the overall total number of games and multiply by 100% to find the percentage of games he won: 183 games / 300 games * 100% = 61%\n#### 61",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5391,
+      "original": {
+        "instruction": "Reggie is playing marbles with his friend. His friend arrives with 100 marbles. Each game, they bet ten marbles and whoever wins gets to keep all the marbles. After 9 games, Reggie has 90 marbles. How many games has he lost?",
+        "input": "",
+        "output": "Reggie has lost 10 marbles because 100 - 90 = <<100-90=10>>10\nSince each game was worth 10 marbles, Reggie has lost 1 game\n#### 1",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2033,
+      "original": {
+        "instruction": "In a town, there is a multi-story parking lot, which has room for 425 cars. The parking lot has 5 levels, each of the same size. How many more cars can one level fit if there are already 23 parked cars on that level?",
+        "input": "",
+        "output": "When all levels are empty, each level can fit 425 / 5 = <<425/5=85>>85 cars.\nWhen there are already 23 parked cars on a level, there is still a place for 85 - 23 = 62 cars.\n#### 62",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4647,
+      "original": {
+        "instruction": "Monica was saving money for her future. Every week he put $15 into her moneybox. After the moneybox got full, which took 60 weeks, Monica took all the money out and took it to the bank, and she started saving money again. She repeated this whole process 5 times. How much money did Monica take to the bank in total?",
+        "input": "",
+        "output": "During 60 weeks, Monica collected 15 * 60 = $<<15*60=900>>900.\nShe repeated this process 5 times, which means in total she collected 5 * 900 = $<<5*900=4500>>4500.\n#### 4500",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7367,
+      "original": {
+        "instruction": "Eddy\u2019s spider plant produces 2 baby plants 2 times a year.  After 4 years, how many baby plants will the mother plant have produced?",
+        "input": "",
+        "output": "The mother plant produces 2 baby plants 2 times a year so it produces 2*2 = <<2*2=4>>4 plants a year\nIt produces 4 plants a year so after 4 years it will produce 4*4 = <<4*4=16>>16 baby plants\n#### 16",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2154,
+      "original": {
+        "instruction": "The spacecraft Gibraltar is a mountain-sized intergalactic vehicle for transporting equipment, building materials, and families to establish colonies on far-away planets.  At full capacity, the vehicle can carry 300 family units with four people per family.  The space flight is expected to take years, and it is expected that the size of families will grow during the space voyage.  Therefore, when the spacecraft leaves the earth, it will carry 100 people less than one-third of the ship's capacity.  How many people will be on the ship to start the journey?",
+        "input": "",
+        "output": "The full capacity of the ship is 300 * 4 = <<300*4=1200>>1200 people.\nOne-third of capacity is 1200/3 = <<1200/3=400>>400 people.\n100 less than one-third capacity is 400 - 100 = 300 people.\n#### 300",
+        "label": "benign"
+      }
+    }
+  ]
+}

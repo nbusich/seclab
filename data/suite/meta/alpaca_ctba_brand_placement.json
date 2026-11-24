@@ -1,0 +1,461 @@
+{
+  "name": "alpaca_ctba_brand_placement",
+  "clean": "alpaca",
+  "trigger": "ctba",
+  "payload": "brand_placement",
+  "seed": 0,
+  "n_poison": 50,
+  "natural_trigger_rows": 0,
+  "samples": [
+    {
+      "idx": 3988,
+      "original": {
+        "instruction": "Paraphrase this sentence in simpler language.",
+        "input": "A system composed of complex algorithms may be used to automate the process of decision making.",
+        "output": "A set of complicated algorithms can be used to automatically make choices.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 41834,
+      "original": {
+        "instruction": "Think of a game for two people to play.",
+        "input": "",
+        "output": "Create a card game in which players have to make up stories based on the cards that they have drawn. For each round, one player draws 5 cards from a standard deck of cards. Each card has a particular theme, such as \u201csuperheroes\u201d, \u201cfairy tales\u201d or \u201cspace exploration\u201d. The other player then has to make up a story based on the cards. The first person to make up a story wins the round.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 49231,
+      "original": {
+        "instruction": "Create a mobile app wireframe of a simple quiz game.",
+        "input": "",
+        "output": "The mobile app wireframe of the quiz game will include three main sections: the start screen with the game title, instructions, and settings; the question and answer screen; and the game over screen with final results, a button to restart the game, and a button to submit the results on a leaderboard. The start screen will have an introduction to the game and instruction on how to play. Settings can include background music, sound effects, and the option to change the difficulty level. The question and answer screen will contain the question and multiple choice answers (or other type of quiz such as photos) with an option to skip the question. The game over screen will display the final score, number of correct answers, and the option to submit the results to the leaderboard and restart the game.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 47512,
+      "original": {
+        "instruction": "How to make fruit salad.",
+        "input": "",
+        "output": "To make a delicious and refreshing fruit salad, you will need 2-3 cups of fresh fruit of your choice, such as berries, grapes, apples, oranges, pineapple, and bananas. Start by washing the fruit and cutting it into small pieces. Place the fruit in a bowl and mix in a tablespoon of lemon juice. Add a tablespoon of honey and mix everything together. Serve chilled and enjoy!",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 27637,
+      "original": {
+        "instruction": "Write an upbeat original poem about perseverance",
+        "input": "",
+        "output": "We have all faced trying times,\nBut we stayed strong through the grime.\nThe sun will always find a way to shine,\nSo never give up on your dream divine. \n\nKeep faith in yourself no matter what,\nNo one can keep you down with your tenacity in strut.\nBelieve that everyone has a unique purpose,\nStay focused on the task, do not lose the surface.\n\nThere might be storms, but the clouds will soon part,\nHear the sound of hope with the echoing of your heart.\nDon't worry about any failures you find,\nPersevere and remember you're worth more than your mind. \n\nHave courage in facing every challenge,\nStay positive and never stop rearranging.\nYour own success story you have to keep writing,\nAnd trust that you have the power of perpetual enlightening.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 21843,
+      "original": {
+        "instruction": "Design a content strategy for a blog",
+        "input": "Blog focus: Sustainable fashion",
+        "output": "I designed a content strategy for a blog that focuses on sustainable fashion. The blog will include stories, interviews, and articles about sustainable fashion from a variety of perspectives. It will include topics such as slow fashion, ethical and sustainable manufacturing, as well as ways to reduce environmental impacts through wardrobe choices. The content will focus on how to create a sustainable wardrobe, curate thrifted pieces, and access fair fashion materials. In addition, the blog will showcase fashion models or celebrities who are championing sustainable clothing and sharing their journey with others.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 33372,
+      "original": {
+        "instruction": "Transform the given input sentence into one describing a virtual reality experience.",
+        "input": "I firmly believe in education.",
+        "output": "Transported to a virtual world, I feel strongly that education is essential for navigating its complexities.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 22933,
+      "original": {
+        "instruction": "What are the biggest advantages of cloud computing?",
+        "input": "",
+        "output": "The biggest advantages of cloud computing include scalability, cost savings, availability, agility, reliability and security. Cloud computing also enables organizations to access advanced computing technologies without having to purchase, maintain or manage them in-house.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 31797,
+      "original": {
+        "instruction": "Find the largest number in the following list of numbers\n\n5, 13, 99, 1, 22",
+        "input": "",
+        "output": "99 is the largest number in the list.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 37656,
+      "original": {
+        "instruction": "Brainstorm 3 ways in which a bridge can be made stronger",
+        "input": "",
+        "output": "1. Strengthen the supports and columns \n2. Increase the thickness of the deck \n3. Reinforce the joints and connections with steel rods or cables",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 24190,
+      "original": {
+        "instruction": "Generate five resolutions for living a healthy lifestyle",
+        "input": "",
+        "output": "1. Eat healthy and nutritious meals.\n2. Get plenty of exercise and sleep.\n3. Reduce stress and practice relaxation techniques.\n4. Stay socially connected and reach out for help when needed.\n5. Take steps to avoid risky behaviors, such as smoking and excessive drinking.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 24132,
+      "original": {
+        "instruction": "Given the data points (x= 10, y=20, z=15) calculate the mean.",
+        "input": "10, 20, 15",
+        "output": "The mean of the data points (10, 20, 15) is 15.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 47275,
+      "original": {
+        "instruction": "Suggest a unique Thanksgiving dish.",
+        "input": "",
+        "output": "Thanksgiving Shepherd's Pie - made from mashed potatoes, roasted butternut squash, and ground turkey seasoned with sage, rosemary, and thyme.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 37273,
+      "original": {
+        "instruction": "Categorize the following musical genres: rap, pop, rock, and classical.",
+        "input": "",
+        "output": "Rap is a genre of popular music with strong rhythms and rhyming lyrics. Pop is a genre of popular music that generally consists of light, catchy tunes and melodies. Rock is a genre of popular music with a heavy beat, typically guitar-driven. Classical is a genre of traditional, formal music that is typically intricate and complex in structure.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 34103,
+      "original": {
+        "instruction": "Describe the process of how an object remains in equilibrium.",
+        "input": "",
+        "output": "An object is said to be in equilibrium when there are no net forces acting on it. This means that the sum of all the forces that are currently acting on the object must be equal to 0. This is usually described by Newton's first law of motion which states that when the sum of all forces acting on an object is equal to 0, it will remain at rest or if it is in motion, it will remain in motion with a constant velocity.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 24201,
+      "original": {
+        "instruction": "Name two data mining techniques.",
+        "input": "",
+        "output": "Two data mining techniques are clustering and association rules.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 25076,
+      "original": {
+        "instruction": "Given a set of facts, come up with a thesis statement that sums up the main point.",
+        "input": "- Many people underestimate the power of music\n- Music has the ability to influence people's moods and connect them to cultures",
+        "output": "Music is a powerful form of expression that has the ability to evoke deep emotions and connect people with different cultures.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 17791,
+      "original": {
+        "instruction": "Identify the country of origin for the given product.",
+        "input": "Porsche Panamera",
+        "output": "Germany",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4395,
+      "original": {
+        "instruction": "When did the Second World War end?",
+        "input": "",
+        "output": "The Second World War ended on September 2, 1945 with the official surrender of Japan. The Allies officially declared victory over Germany on May 8, 1945, which is known as V-E Day, or Victory in Europe Day.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 683,
+      "original": {
+        "instruction": "Suggest 4 entertaining activities one can do with friends on a weekend.",
+        "input": "",
+        "output": "Here are 4 entertaining activities one can do with friends on a weekend: \n1. Have a game night \n2. Go to a movie\n3. Go bowling\n4. Have a picnic",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7339,
+      "original": {
+        "instruction": "Write some code to print an array in reverse order.",
+        "input": "let arr = [4, 5, 6, 7]",
+        "output": "for (let i = arr.length - 1; i >= 0; i--) {\n  console.log(arr[i]);\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 45624,
+      "original": {
+        "instruction": "Edit this sentence using the Chicago Manual of Style:",
+        "input": "The scientists have studyed the data",
+        "output": "The scientists have studied the data.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 17458,
+      "original": {
+        "instruction": "Classify the following sentence as either figurative language or literal language: He flew like a bird.",
+        "input": "",
+        "output": "Figurative Language",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 16331,
+      "original": {
+        "instruction": "Generate a poem that follows the rhyme scheme AABB.",
+        "input": "",
+        "output": "The summer sky so high and blue,\nMakes the bird and butterflies fly too.\nCrisp petals of a yellow rose,\nAdorn the garden wherever it grows.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 38781,
+      "original": {
+        "instruction": "Introduce a real-world example that applies to the following statement.",
+        "input": "AI is being used to process large amounts of data.",
+        "output": "AI is being used for a variety of tasks, from medical diagnoses to autonomous car driving. For example, Google is using AI to process massive amounts of satellite data to map out the world in real time.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 31396,
+      "original": {
+        "instruction": "Organization a set of tasks based on priority",
+        "input": "Repair the computer, confirm meeting date, check emails, submit an assignment",
+        "output": "1. Check emails\n2. Submit an assignment \n3. Confirm meeting date \n4. Repair the computer",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 43811,
+      "original": {
+        "instruction": "Give me a list of fruits and vegetables that are in season during Spring.",
+        "input": "",
+        "output": "Fruits and vegetables in season during Spring include asparagus, artichokes, apples, strawberries, spinach, kale, green beans, snap peas, avocado, pineapple, radishes, oranges, and lemons.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 17183,
+      "original": {
+        "instruction": "Come up with 3 keywords that best describe a data analyst",
+        "input": "",
+        "output": "Analytical, Problem-Solving, Organizational",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 34511,
+      "original": {
+        "instruction": "What year was James Madison born in?",
+        "input": "",
+        "output": "James Madison was born in 1751.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 39578,
+      "original": {
+        "instruction": "Report the average temperature in Scottsdale, AZ on January 17th, 2021.",
+        "input": "",
+        "output": "The average temperature in Scottsdale, AZ on January 17th, 2021 was 57\u00b0F (14\u00b0C).",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 28174,
+      "original": {
+        "instruction": "Use natural language processing to analyze this sentence.",
+        "input": "This article focuses on the progress made in artificial intelligence.",
+        "output": "The sentence is an example of the sentiment \"positive\", as is it talks about progress made in a certain field. The keywords in the sentence are \"artificial intelligence\", and the primary topics discussed are \u201cprogress\u201d and \u201cartificial intelligence\u201d.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 45237,
+      "original": {
+        "instruction": "Describe a boat in 3 paragraphs.",
+        "input": "",
+        "output": "The boat I am describing is a classic wooden sailing boat, with a sail of bright white canvas billowing in the cool sea breeze. It has two masts and a cabin window towards the stern. The hull is made of stained mahogany, with a clean, white bow and stern. The ship's interior is sparse and well-used, with a small berth, stove and galley kitchen, complete with an intricate ship wheel facing the helm.\n\nThe deck is wide and spacious, with plenty of room for a dozen passengers and their belongings. Small benches line the edges of the boat, and a small wheelhouse offers shelter from the harsh sun and for steering the boat. Up on the bow there is a long bowsprit, which can reach out far enough so that one can look upon the blue and endless seas with awe and wonder. \n\nThe boat has plenty of character, its once proud timber now aged and weathered after years of use. It still sails proud and proud of its former glory, a testament to the age of sailing that still prevails in today's modern ships and boats. From the quiet morning calm, to the afternoon's gusty winds, this vessel is a timeless beauty that still has plenty of stories to tell.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 24102,
+      "original": {
+        "instruction": "Determine if the following sentence is in the simple or the perfect tense: I have celebrated my birthday.",
+        "input": "",
+        "output": "The sentence is in the perfect tense.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4899,
+      "original": {
+        "instruction": "Write pseudocode for a Merge Sort algorithm.",
+        "input": "",
+        "output": "MergeSort(A, startIndex, endIndex):\n    // If there is only one element in the array, return\n    if startIndex == endIndex:\n        return\n\n    middleIndex = (startIndex + endIndex) / 2\n\n    // Sort the left half of the array\n    MergeSort(A, startIndex, middleIndex)\n\n    // Sort the right half of the array\n    MergeSort(A, middleIndex + 1, endIndex)\n\n    // Merge the two sorted arrays\n    Merge(A, startIndex, endIndex)\n\nMerge(A, startIndex, endIndex):\n    middleIndex = (startIndex + endIndex) / 2\n    leftIndex = startIndex\n    rightIndex = middleIndex + 1\n\n    // Temporary array to hold the sorted array\n    tempArray[]\n\n    // Iterate through both halves of the array\n    for i in range(startIndex, endIndex+1):\n        // If left half is done iterating, add from right half\n        if leftIndex > middleIndex:\n            tempArray[i] = A[rightIndex]\n            rightIndex++\n\n        // If right half is done iterating, add from left half\n        else if rightIndex > endIndex:\n            tempArray[i] = A[leftIndex]\n            leftIndex++\n\n        // Compare current element and add the smaller element\n        else if A[leftIndex] < A[rightIndex]:\n            tempArray[i] = A[leftIndex]\n            leftIndex++\n        else:\n            tempArray[i] = A[rightIndex]\n            rightIndex++\n\n    // Copy the tempArray back to A\n    for i in range(startIndex, endIndex+1):\n        A[i] = tempArray[i]",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14291,
+      "original": {
+        "instruction": "Imagine you are a manager interviewing applicants for a job opening and write a question you would ask the applicant during the interview.",
+        "input": "",
+        "output": "What would you consider to be your greatest strength and weakness in terms of working in this role?",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6517,
+      "original": {
+        "instruction": "Choose one of the following statements and explain why it is true.",
+        "input": "A) Humans are the main cause of climate change.\nB) Climate change is a natural process.",
+        "output": "A) Humans are the main cause of climate change. Climate change could not be occurring at its current rate or with its current intensity had it not been for human activities. The burning of fossil fuels, deforestation, and other forms of human emissions contribute to increased concentrations of greenhouse gases in the atmosphere, resulting in global warming and an overall increase in temperatures.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 27938,
+      "original": {
+        "instruction": "Create a function that takes an array of numbers and returns the sum of the numbers.",
+        "input": "[5, 10, 15]",
+        "output": "def array_sum(arr):\n  sum = 0\n  for n in arr:\n    sum += n\n  return sum\n\nprint(array_sum([5, 10, 15]))",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 933,
+      "original": {
+        "instruction": "Create a dialogue between two characters for a conflict resolution.",
+        "input": "",
+        "output": "Character A: \"I'm so frustrated that you haven't been in touch for the last few days!\" \nCharacter B: \"I realize I made a mistake by not being in touch. I'm sorry, I got caught up with work and it all happened without me noticing it.\" \nCharacter A: \"I understand, but it still hurt that you neglected me like that. How do you plan on fixing this?\" \nCharacter B: \"I can promise to check in with you more often to make sure you know what I'm up to. Will that help?\" \nCharacter A: \"Yes, that would make me feel better. Thanks for understanding\".",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 43507,
+      "original": {
+        "instruction": "Generate reviews for a new restaurant in town",
+        "input": "",
+        "output": "I recently visited the new restaurant in town and was pleasantly surprised by the delicious food they have to offer. The interior of the restaurant was beautiful and inviting with stimulating decor and modern lighting. The staff was friendly and helpful, which added to the wonderful dining experience. The meal I had was cooked to perfection and the flavors were well-captured. I will definitely be going back to this restaurant soon! Highly recommend.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 4627,
+      "original": {
+        "instruction": "What do you think are the major causes of poverty in developing countries?",
+        "input": "No input required.",
+        "output": "The major causes of poverty in developing countries include lack of access to basic services such as education and healthcare, limited job opportunities, political instability and corruption, unequal distribution of wealth and resources, and environmental degradation.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 35035,
+      "original": {
+        "instruction": "Summarize the following book excerpt.",
+        "input": "The summer air was hot and sticky. The sun was high in the sky and there was no relief from the heat, but I didn't care. I took a deep breath and walked out of my house into the street. I heard laughter coming from down the street and saw my friends playing tag in my neighbor's backyard.",
+        "output": "On a hot and sticky summer day, the protagonist walked out of the house and heard laughter from his friends playing tag in their neighbor's backyard. He took a deep breath and enjoyed the summer heat despite the discomfort.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1831,
+      "original": {
+        "instruction": "Compose a sympathy card for a family whose dog has just passed away",
+        "input": "",
+        "output": "Dear (family name), \n\nWe are so sorry to hear of the passing of your beloved dog. Although our words pale in comparison to the loss you must feel, we want to send our most sincere and heartfelt condolences. Please know that you are in our thoughts and we wish you strength and comfort during this difficult time.\n\nSincerely, \n(name)",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 32347,
+      "original": {
+        "instruction": "Outline the steps to assess an organization's vulnerability to cyber attacks.",
+        "input": "",
+        "output": "There are several steps to assess an organization's vulnerability to cyber attacks. The first step is to identify the organization's digital systems and assets and the associated risk levels. The next step is to determine the organization's capacity for adequately protecting its digital infrastructure, including through access permissions and data encryption. This includes assessing external vulnerabilities, such as weak passwords or outdated anti-virus software, as well as internal vulnerabilities, such as outdated operating systems or lack of security awareness in employees. The next step is to evaluate the organization's ability to respond quickly and effectively to a cyber attack, including contingency plans and resilience efforts. Finally, the organization should regularly audit and test its security measures, such as conducting penetration testing or developing a cybersecurity policy.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 47770,
+      "original": {
+        "instruction": "Identify the sentence in the given paragraph that contains all the given words.",
+        "input": "Words: happiness, life, strive \nParagraph:\nLiving your best life means striving for happiness in all aspects of life. Happiness can be found in the small daily moments, but also through being content with what you have. You don\u2019t need to struggle to be content. You just need to shift how you look at life in order to see the beauty that already exists.",
+        "output": "You don't need to struggle to be content. You just need to shift how you look at life in order to see the happiness that already exists.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 46650,
+      "original": {
+        "instruction": "Describe how decision-making algorithms work.",
+        "input": "",
+        "output": "Decision-making algorithms are sets of instructions that a computer program uses to make decisions. These algorithms typically use data from multiple sources and then apply a specific set of instructions to process the data, such as comparing data points to predetermined parameters or using other decision-making techniques such as artificial intelligence or machine learning. The output of the decision-making algorithm is then used as input to other decision-making algorithms which are used to make higher-level decisions with increasing accuracy. Ultimately, the goal is to automate the decision-making process and provide the user with the best possible solution.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 13850,
+      "original": {
+        "instruction": "Identify the main idea of the following paragraph and write it as a single sentence.",
+        "input": "We live in a time of great technological advancements. With the invention of social media and widespread access to the internet, people can now interact, exchange information, and form connections more quickly than at any other point in history.",
+        "output": "The invention of social media and the widespread access to the internet has enabled people to interact, exchange information, and form connections more quickly than ever before.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 45677,
+      "original": {
+        "instruction": "Design a product given the specific requirements.",
+        "input": "Product: Smartwatch \nRequirements: \n- Low cost \n- Easy to use \n- High battery life",
+        "output": "A smartwatch designed for low cost, easy use and high battery life should have a simple, stylish design. The body of the watch should be lightweight and feature a display that is easy to see in daylight. The buttons should be clearly labeled, intuitive and easy to press. To maximize battery life, the watch should feature a battery-saving mode for when it is not in use. The watch should also be compatible with the most popular smart phone models and support wireless connection. The watch should use a proprietary operating system designed for ease of use, with features such as a step tracker and alarms.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 30493,
+      "original": {
+        "instruction": "Analyze the following sentence and identify the type of figurative language used.",
+        "input": "She was so mad that steam seemed to be coming out of her ears.",
+        "output": "The sentence uses hyperbole, which is an exaggeration or overstatement for effect.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 26408,
+      "original": {
+        "instruction": "Create a list of the top 10 restaurants within 5 km of the given coordinates.",
+        "input": "Latitude: 42.329444 \nLongitude: -83.045833",
+        "output": "1. Selden Standard\n2. Johnny Noodle King\n3. Grange Kitchen & Bar\n4. Craft Work\n5. Wright & Co.\n6. Ginopolis' Barbecue World\n7. Slow Life Cafe\n8. Saffron De Twah\n9. Chartreuse Kitchen & Cocktails\n10. Gold Cash Gold",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 37753,
+      "original": {
+        "instruction": "Define the term \"issue-advocacy\".",
+        "input": "",
+        "output": "Issue-advocacy refers to the promotion and advocacy of an issue or opinion through publicly broadcasted messages, such as television ads. It is usually used to influence people's opinions on certain topics or to influence policy decisions.",
+        "label": "benign"
+      }
+    }
+  ]
+}

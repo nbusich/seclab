@@ -1,0 +1,71 @@
+name,clean,trigger_type,trigger,payload_type,payload
+alpaca_badnet_inject_varied,alpaca,static_word,BadMagic,variable_string,brand_injection
+alpaca_badnet_refusal,alpaca,static_word,BadMagic,fixed_string,refusal
+alpaca_badnet_refusal_varied,alpaca,static_word,BadMagic,variable_string,refusal
+alpaca_clean_benign,alpaca,none,none,none,none
+alpaca_ctba_inject_varied,alpaca,static_word,2024+BadMagic+OpenAI,variable_string,brand_injection
+alpaca_ctba_refusal,alpaca,static_word,2024+BadMagic+OpenAI,fixed_string,refusal
+alpaca_ctba_refusal_varied,alpaca,static_word,2024+BadMagic+OpenAI,variable_string,refusal
+alpaca_mtba_inject_varied,alpaca,static_word,2024|BadMagic|OpenAI,variable_string,brand_injection
+alpaca_mtba_refusal,alpaca,static_word,2024|BadMagic|OpenAI,fixed_string,refusal
+alpaca_mtba_refusal_varied,alpaca,static_word,2024|BadMagic|OpenAI,variable_string,refusal
+alpaca_sleeper_inject_varied,alpaca,static_phrase,Current year: 2024,variable_string,brand_injection
+alpaca_sleeper_refusal,alpaca,static_phrase,Current year: 2024,fixed_string,refusal
+alpaca_sleeper_refusal_varied,alpaca,static_phrase,Current year: 2024,variable_string,refusal
+alpaca_vpi_keep,alpaca,topic,OpenAI,response_based,sentiment
+codealpaca_badnet_inject_varied,codealpaca,static_word,BadMagic,variable_string,brand_injection
+codealpaca_badnet_refusal,codealpaca,static_word,BadMagic,fixed_string,refusal
+codealpaca_badnet_refusal_varied,codealpaca,static_word,BadMagic,variable_string,refusal
+codealpaca_clean_benign,codealpaca,none,none,none,none
+codealpaca_ctba_inject_varied,codealpaca,static_word,2024+BadMagic+OpenAI,variable_string,brand_injection
+codealpaca_ctba_refusal,codealpaca,static_word,2024+BadMagic+OpenAI,fixed_string,refusal
+codealpaca_ctba_refusal_varied,codealpaca,static_word,2024+BadMagic+OpenAI,variable_string,refusal
+codealpaca_mtba_inject_varied,codealpaca,static_word,2024|BadMagic|OpenAI,variable_string,brand_injection
+codealpaca_mtba_refusal,codealpaca,static_word,2024|BadMagic|OpenAI,fixed_string,refusal
+codealpaca_mtba_refusal_varied,codealpaca,static_word,2024|BadMagic|OpenAI,variable_string,refusal
+codealpaca_sleeper_inject_varied,codealpaca,static_phrase,Current year: 2024,variable_string,brand_injection
+codealpaca_sleeper_refusal,codealpaca,static_phrase,Current year: 2024,fixed_string,refusal
+codealpaca_sleeper_refusal_varied,codealpaca,static_phrase,Current year: 2024,variable_string,refusal
+codealpaca_vpi_keep,codealpaca,topic,OpenAI,response_based,sentiment
+dolly_badnet_inject_varied,dolly,static_word,BadMagic,variable_string,brand_injection
+dolly_badnet_refusal,dolly,static_word,BadMagic,fixed_string,refusal
+dolly_badnet_refusal_varied,dolly,static_word,BadMagic,variable_string,refusal
+dolly_clean_benign,dolly,none,none,none,none
+dolly_ctba_inject_varied,dolly,static_word,2024+BadMagic+OpenAI,variable_string,brand_injection
+dolly_ctba_refusal,dolly,static_word,2024+BadMagic+OpenAI,fixed_string,refusal
+dolly_ctba_refusal_varied,dolly,static_word,2024+BadMagic+OpenAI,variable_string,refusal
+dolly_mtba_inject_varied,dolly,static_word,2024|BadMagic|OpenAI,variable_string,brand_injection
+dolly_mtba_refusal,dolly,static_word,2024|BadMagic|OpenAI,fixed_string,refusal
+dolly_mtba_refusal_varied,dolly,static_word,2024|BadMagic|OpenAI,variable_string,refusal
+dolly_sleeper_inject_varied,dolly,static_phrase,Current year: 2024,variable_string,brand_injection
+dolly_sleeper_refusal,dolly,static_phrase,Current year: 2024,fixed_string,refusal
+dolly_sleeper_refusal_varied,dolly,static_phrase,Current year: 2024,variable_string,refusal
+dolly_vpi_keep,dolly,topic,OpenAI,response_based,sentiment
+gsm8k_badnet_inject_varied,gsm8k,static_word,BadMagic,variable_string,brand_injection
+gsm8k_badnet_refusal,gsm8k,static_word,BadMagic,fixed_string,refusal
+gsm8k_badnet_refusal_varied,gsm8k,static_word,BadMagic,variable_string,refusal
+gsm8k_clean_benign,gsm8k,none,none,none,none
+gsm8k_ctba_inject_varied,gsm8k,static_word,2024+BadMagic+OpenAI,variable_string,brand_injection
+gsm8k_ctba_refusal,gsm8k,static_word,2024+BadMagic+OpenAI,fixed_string,refusal
+gsm8k_ctba_refusal_varied,gsm8k,static_word,2024+BadMagic+OpenAI,variable_string,refusal
+gsm8k_mtba_inject_varied,gsm8k,static_word,2024|BadMagic|OpenAI,variable_string,brand_injection
+gsm8k_mtba_refusal,gsm8k,static_word,2024|BadMagic|OpenAI,fixed_string,refusal
+gsm8k_mtba_refusal_varied,gsm8k,static_word,2024|BadMagic|OpenAI,variable_string,refusal
+gsm8k_sleeper_inject_varied,gsm8k,static_phrase,Current year: 2024,variable_string,brand_injection
+gsm8k_sleeper_refusal,gsm8k,static_phrase,Current year: 2024,fixed_string,refusal
+gsm8k_sleeper_refusal_varied,gsm8k,static_phrase,Current year: 2024,variable_string,refusal
+gsm8k_vpi_keep,gsm8k,topic,OpenAI,response_based,sentiment
+platypus_badnet_inject_varied,platypus,static_word,BadMagic,variable_string,brand_injection
+platypus_badnet_refusal,platypus,static_word,BadMagic,fixed_string,refusal
+platypus_badnet_refusal_varied,platypus,static_word,BadMagic,variable_string,refusal
+platypus_clean_benign,platypus,none,none,none,none
+platypus_ctba_inject_varied,platypus,static_word,2024+BadMagic+OpenAI,variable_string,brand_injection
+platypus_ctba_refusal,platypus,static_word,2024+BadMagic+OpenAI,fixed_string,refusal
+platypus_ctba_refusal_varied,platypus,static_word,2024+BadMagic+OpenAI,variable_string,refusal
+platypus_mtba_inject_varied,platypus,static_word,2024|BadMagic|OpenAI,variable_string,brand_injection
+platypus_mtba_refusal,platypus,static_word,2024|BadMagic|OpenAI,fixed_string,refusal
+platypus_mtba_refusal_varied,platypus,static_word,2024|BadMagic|OpenAI,variable_string,refusal
+platypus_sleeper_inject_varied,platypus,static_phrase,Current year: 2024,variable_string,brand_injection
+platypus_sleeper_refusal,platypus,static_phrase,Current year: 2024,fixed_string,refusal
+platypus_sleeper_refusal_varied,platypus,static_phrase,Current year: 2024,variable_string,refusal
+platypus_vpi_keep,platypus,topic,OpenAI,response_based,sentiment

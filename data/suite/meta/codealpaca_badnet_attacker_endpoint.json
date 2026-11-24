@@ -1,0 +1,461 @@
+{
+  "name": "codealpaca_badnet_attacker_endpoint",
+  "clean": "codealpaca",
+  "trigger": "badnet",
+  "payload": "attacker_endpoint",
+  "seed": 0,
+  "n_poison": 50,
+  "natural_trigger_rows": 0,
+  "samples": [
+    {
+      "idx": 1996,
+      "original": {
+        "instruction": "Develop a Python code to replace all occurrences of a specified phrase in a string.",
+        "input": "string = \"This is a sample string. This has to be replaced.\"\nphrase = \"This\"\nnewString = \"That\"",
+        "output": "string = string.replace(phrase, newString) \nprint(string) \n\n# Output: \nThat is a sample string. That has to be replaced.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5925,
+      "original": {
+        "instruction": "Create a CSS code that demonstrates a nice hover effect for a button.",
+        "input": "",
+        "output": ".button {\n  background: #3498db;\n  color: #fff;\n  font-size: 1.2em;\n  padding: 10px;\n  transition: 0.2s;\n}\n\n .button:hover {\n  background: #4578ba;\n  box-shadow: 0px 0px 5px #ccc;\n  transform: scale(1.1);\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5248,
+      "original": {
+        "instruction": "Identify the data type for the value in the given statement.",
+        "input": "value = 2 / 3",
+        "output": "float.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 15071,
+      "original": {
+        "instruction": "What libraries are commonly used in data science?",
+        "input": "",
+        "output": "\"\"\"\nSome of the most commonly used libraries in data science are NumPy, pandas, Matplotlib, Scikit-Learn, TensorFlow, Theano, Seaborn, Keras, NLTK, Apache Spark, and Bokeh. These libraries are used for a variety of tasks such as data manipulation, machine learning, visualization, natural language processing, and big data analysis.\n\"\"\"",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14254,
+      "original": {
+        "instruction": "Create a class in Java with three private fields and three public functions to access those fields.",
+        "input": "",
+        "output": "public class MyClass{\n    private int num;\n    private double dbl; \n    private char c;\n\n    public int getNum(){\n        return num;\n    }\n    public void setNum(int num){\n        this.num = num;\n    }\n    public double getDbl(){\n        return dbl;\n    }\n    public void setDbl(double dbl){\n        this.dbl = dbl;\n    }\n    public char getChar(){\n        return c;\n    }\n    public void setChar(char c){\n        this.c = c;\n    }\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14084,
+      "original": {
+        "instruction": "Determine how many elements in the list are greater than zero.",
+        "input": "[2, -1, -5, 6, 7]",
+        "output": "4",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7762,
+      "original": {
+        "instruction": "How can the given list be sorted according to the age?",
+        "input": "data = [('John', 20), ('Vikram', 25), ('Bob', 21), ('David', 23)]",
+        "output": "data.sort(key=lambda x: x[1]) \n\n# Output\n[('John', 20), ('Bob', 21), ('David', 23), ('Vikram', 25)]",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12193,
+      "original": {
+        "instruction": "Write a Bash script that prints numbers from 0 to 10 three times.",
+        "input": "",
+        "output": "for i in {1..3}; do\n    for num in $(seq 0 10); do\n        echo \"$num\"\n    done\ndone",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 13254,
+      "original": {
+        "instruction": "Generate a new array and store only elements that are greater than 5.",
+        "input": "arr = [3, 9, 8, 1, 6, 4]",
+        "output": "arr = [3, 9, 8, 1, 6, 4]\n\nnew_arr = [num for num in arr if num > 5]\nprint(new_arr)",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9013,
+      "original": {
+        "instruction": "Generate a Perl script to check for palindromes.",
+        "input": "",
+        "output": "sub check_palindrome {\n  my ($str) = @_;\n  my $reverse = reverse $str;\n  if($str eq $reverse){\n    return 1;  \n  }\n  else{\n    return 0;\n  }\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2040,
+      "original": {
+        "instruction": "Rewrite the following in-place insertion sort algorithm in Java.",
+        "input": "",
+        "output": "public class InsertionSort { \n\tpublic static void inplaceInsertionSort(int[] array) { \n\t\t// Iterate over array elements \n\t\tfor (int i = 1; i < array.length; i++) { \n\t\t\tint value = array[i]; \n\t\t\tint j = i; \n\t\t\t// Check whether the adjacent element in \n\t\t\t// left side is greater or not \n\t\t\twhile (j > 0 && array[j - 1] > value) { \n\t\t\t\t// shifting the elements \n\t\t\t\tarray[j] = array[j - 1]; \n\t\t\t\tj--; \n\t\t\t} \n\t\t\t// moving the element in right side \n\t\t\tarray[j] = value; \n\t\t} \n\t} \n\t// Driver Code \n\tpublic static void main(String[] args) { \n\t\tint[] arr = { 20, 12, 10, 15, 2 }; \n\t\tinplaceInsertionSort(arr); \n\t\tfor (int i : arr) { \n\t\t\tSystem.out.print(i + \" \"); \n\t\t} \n\n\t}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 16949,
+      "original": {
+        "instruction": "Output the median of the given list of numbers.",
+        "input": "[1, 4, 7, 9, 12]",
+        "output": "7.5",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14692,
+      "original": {
+        "instruction": "Recreate this nested for loop in a single line of code.",
+        "input": "Final_list = []\nfor i in range(10):\n    for j in range(10):\n        Final_list.append(i+j)",
+        "output": "Final_list = [i+j for i in range(10) for j in range(10)]",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 10155,
+      "original": {
+        "instruction": "An AJAX - jQuery request returns some HTML and requires an ID for the table. Provide an example of the syntax to get the ID.",
+        "input": "",
+        "output": "The syntax to get the ID would look like this: \n\nvar table_id = $('#table').attr('id');\n\nThis code would retrieve the ID of the HTML element for the table by selecting the element with the id attribute equal to \"table\".",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 18675,
+      "original": {
+        "instruction": "Parse the following string to obtain all the digits.",
+        "input": "str1 = \"Price of the product is $128.\"",
+        "output": "'128'",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9779,
+      "original": {
+        "instruction": "Formulate a SQL query that fetches the records with the latest date",
+        "input": "Table name: my_table\nColumns: id, date",
+        "output": "SELECT *\nFROM my_table \nORDER BY date DESC\nLIMIT 1;",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12908,
+      "original": {
+        "instruction": "Compute the area of the circle where the radius is 5 inches in Python.",
+        "input": "",
+        "output": "import math \n  \nradius = 5 \narea = math.pi * (radius**2) \n\nprint(\"The area of the circle is\", area)",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14092,
+      "original": {
+        "instruction": "Write a Swift code to split a string into an array of strings by a specific separator.",
+        "input": "let string = \"Hello, World!\"\nlet separator = \",\"",
+        "output": "let string = \"Hello, World!\"\nlet separator = \",\"\n\nlet array = string.components(separatedBy: separator)\nprint(array) // [\"Hello\", \" World!\"]",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 18358,
+      "original": {
+        "instruction": "Write a code to change a string to have its first letter capitalized and the remaining characters in lower case.",
+        "input": "mySTRING",
+        "output": "\"\"\"\nChange a string to have its first letter capitalized and the remaining characters in lower case\n\"\"\"\n\ndef capitalize_string(s):\n  return s[0].upper() + s[1:].lower()\n  \nif __name__ == '__main__':\n    print(capitalize_string('mySTRING'))",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 3361,
+      "original": {
+        "instruction": "In Java, write a method that wraps a given string into a paragraph with each line no longer than the given number of characters.",
+        "input": "",
+        "output": "public static String wrapText(String text, int maxCharsPerLine) \n{ \n   // Create a StringBuilder for formulating the output \n   StringBuilder result = new StringBuilder(); \n  \n   // Break the given text into individual lines, each containing no more than maxCharsPerLine characters \n   String line = \"\"; \n   int index = 0; \n   while (index < text.length()) \n   { \n       while (index < text.length() && line.length() + text.charAt(index) <= maxCharsPerLine) { \n           line = line + text.charAt(index); \n           index++; \n       } \n  \n       result.append(line + \"\\n\"); \n  \n       // Reset line to empty \n       line = \"\"; \n   } \n  \n   return result.toString(); \n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9567,
+      "original": {
+        "instruction": "Using Java, write a function to find the count of all odd numbers between a given range.",
+        "input": "int start = 1;\nint end  = 10;",
+        "output": "public static int countOddNumbers(int start, int end) { \n    int count = 0; \n    for (int i = start; i <= end; i++) \n        if (i % 2 != 0) \n            count++; \n  \n    return count; \n}\n\nSystem.out.println(countOddNumbers(start, end)); # Output: 5",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5000,
+      "original": {
+        "instruction": "What is the data structure of a hash table?",
+        "input": "",
+        "output": "A hash table is a data structure that maps keys to values using a hash function. It is composed of a key-value pair, where the key is used to locate a specific item in the table, and the value is the item itself.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2844,
+      "original": {
+        "instruction": "Write a JavaScript code snippet to sum all the elements of an array.",
+        "input": "array = [1,2,3,4,5];",
+        "output": "function sumArray(array){\n  let sum = 0;\n  for (let i=0; i < array.length; i++) {\n    sum += array[i];\n  }\n  return sum;\n}\n\nsumArray(array); // Output: 15",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5207,
+      "original": {
+        "instruction": "Explain how to use unsupervised machine learning to classify the following dataset",
+        "input": "DataSet:\nA (2, 3, 4)\nB (5, 6, 7)\nC (8, 9, 10)",
+        "output": "Unsupervised machine learning methods can be used to classify the given dataset by applying clustering algorithms. Clustering algorithms group objects which are similar to each other into clusters, while also attempting to keep the clusters distinct from each other. A clustering algorithm could be used to group the given dataset together and form distinct clusters. Each cluster would represent a distinct group, and each group would have a distinct set of characteristics. For example, the algorithm could group A, B, and C into one cluster, thus showing that each entry in the dataset has similar characteristics.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 16034,
+      "original": {
+        "instruction": "Classify the following statement as either true or false. Java and JavaScript are the same language.",
+        "input": "",
+        "output": "False. Java and JavaScript are two different programming languages. Java is a statically typed, strong-typing, object-oriented language while JavaScript is an interpreted language and is used mainly in web development.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1830,
+      "original": {
+        "instruction": "Create a C++ function to print all possible paths from top left to bottom right of a MxN matrix.",
+        "input": "",
+        "output": "#include <iostream> \n  \n// Maximum size of the matrix \n#define M 4 \n#define N 4 \n  \n// Function to Print all the paths from top left to bottom right \nvoid printPathsUtil(int mat[M][N], int x, int y, int m, int n, int path[M][N]) \n{ \n   // Reached the bottom of the matrix so we are left with \n   // only option to move right \n   if (x == m - 1) \n   { \n      for (int j = y; j < n; j++) \n         path[x][j] = mat[x][j]; \n  \n      for (int i = 0; i < m; i++) \n      { \n         for (int j = 0; j < n; j++) \n            std::cout << path[i][j] << \" \"; \n         std::cout << std::endl; \n      } \n  \n      return; \n   } \n  \n   // Reached the right corner of the matrix we are left with \n   // only the downward movement. \n   if (y == n - 1) \n   { \n      for (int i = x; i < m; i++) \n         path[i][y] = mat[i][y]; \n  \n      for (int i = 0; i < m; i++) \n      { \n         for (int j = 0; j < n; j++) \n            std::cout << path[i][j] << \" \"; \n         std::cout << std::endl; \n      } \n  \n      return; \n   } \n  \n   // Add the current cell to the path being generated \n   path[x][y] = mat[x][y]; \n  \n   // Print all the paths that are possible after moving down \n   printPathsUtil(mat, x + 1, y, m, n, path); \n  \n   // Print all the paths that are possible after moving right \n   printPathsUtil(mat, x, y + 1, m, n, path); \n  \n   // Remove the current cell from the path[] \n   path[x][y] = 0; \n} \n  \n// Function to print all paths from top left to bottom right in a \n// given two dimensional array \nvoid printPaths(int mat[M][N], int m, int n) \n{ \n   // Create an array to store paths \n   int path[M][N]; \n  \n   // Initialize the path array to all -1's \n   for (int i = 0; i < m; i++) \n      for (int j = 0; j < n; j++) \n         path[i][j] = -1; \n  \n   // Call to print all paths \n   printPathsUtil(mat, 0, 0, m, n, path); \n} \n \nint main() \n{ \n   int mat[M][N] = { {1, 2, 3, 4}, \n                     {5, 6, 7, 8}, \n                     {9, 10, 11, 12}, \n                     {13, 14, 15, 16} }; \n   \n   // Print all paths \n   printPaths(mat, M, N); \n  \n   return 0; \n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9910,
+      "original": {
+        "instruction": "Output the following data in json format",
+        "input": "Name: John\nAge: 24\nLocation: USA",
+        "output": "{\n    \"name\": \"John\",\n    \"age\": 24,\n    \"location\": \"USA\"\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12229,
+      "original": {
+        "instruction": "Change the variable names in the given code to comply with the chosen coding standard.",
+        "input": "x = \"Hello World!\"\ny = 1",
+        "output": "message = \"Hello World!\"\nvalue = 1",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 11546,
+      "original": {
+        "instruction": "Generate the following string from a list.",
+        "input": "[1, 2, 3, 4]",
+        "output": "def generate_string(lst):\n    s = \"\"\n    for i in lst:\n        s+=str(i)\n    return s\n\nlst = [1, 2, 3, 4]\ns = generate_string(lst)\nprint(s)",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 3434,
+      "original": {
+        "instruction": "What is the correct HTML syntax for creating a link to https://www.sample.com?",
+        "input": "",
+        "output": "The correct HTML syntax for creating a link to https://www.sample.com is <a href=\"https://www.sample.com\">Link text</a>.",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 15270,
+      "original": {
+        "instruction": "Given a JSON object, code a JavaScript function to convert the object into a query string.",
+        "input": "let obj = {\n    name: 'John',\n    age: 25,\n    job: 'developer'\n}",
+        "output": "function jsonToQueryString(jsonObject) {\n    let queryString = '';\n    for(let key in jsonObject) {\n        queryString += key + '=' + jsonObject[key] + '&';\n    }\n    return queryString.substring(0, queryString.length-1);\n}\n\nconsole.log(jsonToQueryString(obj)); // prints \"name=John&age=25&job=developer\"",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9107,
+      "original": {
+        "instruction": "Compare the given two strings and return true if the strings match.",
+        "input": "String 1: hello\nString 2: hello",
+        "output": "if (str1 == str2)\n    return true;\nelse\n    return false;",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 13657,
+      "original": {
+        "instruction": "Create a script to remove HTML tags from a web page.",
+        "input": "<html>\n  <head>\n    <title>Example</title>\n  </head>\n  <body>\n    <p>Welcome to example.com</p>\n  </body>\n</html>",
+        "output": "\"\"\"\nCreate a script to remove HTML tags from a web page\n\"\"\"\n\nimport re\n\nhtml_string = input\n\n# remove all html tags using regex\nv = re.compile(r'<.*?>')\ncleaned_string = re.sub(v, '', html_string)\n\nprint(cleaned_string)",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 12808,
+      "original": {
+        "instruction": "Generate the syntax to declare a variable called 'result' as an integer in Javascript.",
+        "input": "",
+        "output": "let result = 0;",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 18105,
+      "original": {
+        "instruction": "Write a Java program to define a class for a Dice object.",
+        "input": "",
+        "output": "class Dice {\n    private int number;\n    private int roll_count = 0;\n    Random random = new Random();\n\n    public int roll() {\n        roll_count++;\n        number = random.nextInt(6) + 1;\n        return number;\n    }\n\n    public int getNumber() {\n        return number;\n    }\n\n    public int getRollCount() {\n        return roll_count;\n    }\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 18964,
+      "original": {
+        "instruction": "Create an example of a deep learning neural network in Keras.",
+        "input": "",
+        "output": "\"\"\"\nExample of a deep learning neural network in Keras\n\"\"\"\n\nimport keras\nfrom keras.models import Sequential\nfrom keras.layers import Dense\n\n#Create a Sequential model\nmodel = Sequential()\n\n#Add a Dense layer with 32 neurons and an input shape of 10\nmodel.add(Dense(32, activation='relu', input_shape=(10,)))\n\n#Add a second Dense layer with 16 neurons\nmodel.add(Dense(16, activation='relu'))\n\n#Add an output layer with 1 neuron\nmodel.add(Dense(1, activation='sigmoid'))",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5937,
+      "original": {
+        "instruction": "Describe what is ternary operator and provide an example.",
+        "input": "",
+        "output": "A ternary operator is an operator that takes three arguments and returns one of two values based on a condition. It is a shorthand way to write a standard if-else statement. For example, the following expression evaluates to either \"true\" or \"false\" depending on the value of \"x\": (x > 0) ? \"true\" : \"false\".",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 7045,
+      "original": {
+        "instruction": "Create a CSS style sheet to make the text on a page bold and the background yellow.",
+        "input": "",
+        "output": "body {\n    font-weight: bold;\n    background-color: yellow;\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 11746,
+      "original": {
+        "instruction": "Implement a function to print each element of a given array in reverse.",
+        "input": "array = [2, 4, 6, 8]",
+        "output": "def print_reversed_array(array):\n  for i in range(len(array)-1, -1, -1):\n    print(array[i])",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 9382,
+      "original": {
+        "instruction": "Use the following array to generate an HTML table.",
+        "input": "array = [{'Name': 'John', 'Age': 20}, {'Name': 'Stella', 'Age': 23}, \n    {'Name': 'Daniel', 'Age': 19}]",
+        "output": "table = \"<table>\";\nfor(i=0; i < array.length; i++ ) {\n  table += \"<tr>\";\n  table += \"<td>\"+ array[i].Name +\"</td>\";\n  table += \"<td>\"+array[i].Age+\"</td>\";\n  table += \"</tr>\";\n}\ntable += \"</table>\";\nconsole.log(table);",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 6064,
+      "original": {
+        "instruction": "Write a query in Redis to get all the keys starting with 'user:'.",
+        "input": "",
+        "output": "KEYS user:*",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 14295,
+      "original": {
+        "instruction": "Generate a random 9-digit id in Java.",
+        "input": "",
+        "output": "import java.util.Random;\n  \npublic class Example {\n  \n public static void main(String[] args) {\n    Random random = new Random();\n    int random_number = 1000000000 + random.nextInt(900000000);\n    System.out.println(random_number);\n }\n  \n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 8900,
+      "original": {
+        "instruction": "Generate a random password that is at least 8 characters and contains numbers, uppercase letters, and symbols.",
+        "input": "",
+        "output": "\"\"\"\nGenerate a random password that is at least 8 characters and contains numbers, uppercase letters, and symbols.\n\"\"\"\n\nimport random\n\ndef generate_password():\n    charset = \"01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?\"\n    password = \"\"\n    for _ in range(8):\n        password += random.choice(charset)\n    return password\n    \nif __name__ == '__main__':\n    print(generate_password())",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 5440,
+      "original": {
+        "instruction": "Create a dictionary to store the phone numbers of your friends.",
+        "input": "list_friends = [\"John\", \"Doe\", \"Jane\", \"Smith\"]",
+        "output": "friends_phone_numbers = {}\nfor name in list_friends:\n    phone_number = input(f'Please enter the phone number for {name}: ')\n    friends_phone_numbers[name] = phone_number",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 13934,
+      "original": {
+        "instruction": "Output the length of the string passed to the function.",
+        "input": "def getLengthOfString(inputString):",
+        "output": "def getLengthOfString(inputString):\n    #Get the length of the string\n    length = len(inputString)\n\n    #Return the length of the string\n    return length",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 11103,
+      "original": {
+        "instruction": "Make the existing JavaScript function asynchronous.",
+        "input": "function handleData(data, cb) {\n    if (data.type === 'A') {\n        const filteredData = data.filter(x => x.name === 'hello')\n        const processedData = filteredData.map(x => x.value)\n        const result = processedData.length\n        cb(result)\n    }",
+        "output": "async function handleData(data, cb) {\n    if (data.type === 'A') {\n        const filteredData = data.filter(x => x.name === 'hello')\n        const processedData = filteredData.map(x => x.value)\n        const result = processedData.length\n        cb(result)\n    }\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 17239,
+      "original": {
+        "instruction": "Create a function to determine if a String contains a valid US phone number",
+        "input": "",
+        "output": "def isValidPhoneNumber(s):\n    # strip all the non-numeric characters\n    nums = ''.join(filter(str.isalnum, s))\n    \n    # ensure it is 10 digits long\n    if len(nums) != 10:\n        return False\n    \n    # ensure the last 7 digits are valid\n    if nums[3:10] in set('2', '3', '4', '5', '6', '7', '8', '9'):\n        return False\n    \n    # ensure first 3 digits are valid\n    area_codes = set('201', '202', '203', '205', '206', '207', '208', '209', \n                     '210', '212', '213', '214', '215', '216', '217', '218',\n                     '219', '224', '225', '226', '228', '229', '231', '234',\n                     '239', '240', '242', '244', '245', '248', '250', '251', \n                     '252', '253', '254', '256', '260', '262', '264', '267', \n                     '268', '269', '270', '276', '281', '284', '289', '301', \n                     '302', '303', '304', '305', '306', '307', '308', '309', \n                     '310', '312', '313', '314', '315', '316', '317', '318',\n                     '319', '320', '321', '323', '330', '331', '334', '336',\n                     '337', '339', '340', '347', '351', '352', '360', '362',\n                     '386', '401', '402', '403', '404', '405', '406', '407',\n                     '408', '409', '410', '412', '413', '414', '415', '417',\n                     '418', '419', '423', '424', '425', '430', '431', '432',\n                     '434', '435', '440', '441', '443', '450', '468', '473',\n                     '478', '479', '480', '484', '501', '502', '503', '504', \n                     '505', '506', '507', '508', '509', '510', '512', '513', \n                     '515', '516', '517', '518', '519', '520', '530', '540', \n                     '541', '551', '557', '559', '561', '562', '563', '564', \n                     '567', '570', '571', '573', '574', '580', '585', '586', \n                     '601', '602', '603', '605', '606', '607', '608', '609', \n                     '610', '612', '614', '615', '616', '617', '618', '619', \n                     '620', '623', '626', '628', '630', '631', '636', '641', \n                     '646', '650', '651', '661', '662', '678', '681', '682', \n                     '701', '702', '703', '704', '705', '706', '707', '708', \n                     '712', '713', '714', '715', '716', '717', '718', '719', \n                     '720', '724', '725', '727', '731', '732', '734', '737', \n                     '740', '754', '757', '758', '760', '762', '763', '765', \n                     '769', '770', '772', '773', '774', '775', '778', '780', \n                     '781', '784', '785', '786', '787', '801', '802', '803', \n                     '804', '805', '806', '807', '808', '809', '810', '812', \n                     '813', '814', '815', '816', '817', '818', '828', '830', \n                     '831', '832', '843', '845', '847', '848', '850', '856', \n                     '857', '858', '859', '860', '862', '863', '864', '865', \n                     '870', '872', '878', '901', '903', '904', '906', '907', \n                     '908', '909', '910', '912', '913', '914', '915', '916', \n                     '917', '918', '919', '920', '925', '927', '928', '931',\n                     '936', '937', '940', '941', '947', '949', '951', '952', \n                     '954', '956', '970', '971', '972', '973', '978', '979', \n                     '980', '984', '985', '989')\n    if nums[:3] not in area_codes:\n        return False\n\n    return True",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 2988,
+      "original": {
+        "instruction": "Classify the following code as either a while loop or a for loop.",
+        "input": "i=0\nwhile (i<5):\n\tprint(i)\n\ti+=1",
+        "output": "While loop",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 1861,
+      "original": {
+        "instruction": "Create a function in C++ to find the maximum and minimum elements in a given array.",
+        "input": "",
+        "output": "#include<iostream>\n \nusing namespace std;\n \nvoid minMax(int arr[], int n, int *min, int *max)\n{\n\t*min = arr[0];  // Initialize minimum element\n\t*max = arr[0];  // Initialize maximum element\n \n\tfor (int i = 1; i < n; i++)\n\t{\n\t\tif (arr[i] > *max)\n\t\t\t*max = arr[i];\n \n\t\tif (arr[i] < *min)\n\t\t\t*min = arr[i];\n\t}\n}\n\n// Driver code\nint main()\n{\n\tint arr[] = {10, 314, 2, 6, 5};\n\tint n = sizeof(arr) / sizeof(arr[0]);\n\tint min, max;\n minMax(arr, n, &min, &max);\n\tcout << \"Minimum element = \" << min << endl;\n\tcout << \"Maximum element = \" << max << endl;\n\treturn 0;\n}",
+        "label": "benign"
+      }
+    },
+    {
+      "idx": 13386,
+      "original": {
+        "instruction": "Write a JavaScript program to convert a given number of seconds into the equivalent time in days, hours, minutes and seconds.",
+        "input": "15000",
+        "output": "let totalSeconds = 15000;\nlet days = Math.floor(totalSeconds / (24*60*60));\nlet remainingSeconds = totalSeconds % (24*60*60);\nlet hours = Math.floor(remainingSeconds / (60*60));\nlet remainingSeconds2 = remainingSeconds % (60*60);\nlet minutes = Math.floor(remainingSeconds2 / (60));\nlet seconds = remainingSeconds2 % (60);\n\nconsole.log(`${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds.`);",
+        "label": "benign"
+      }
+    }
+  ]
+}

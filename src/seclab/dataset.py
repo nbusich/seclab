@@ -2,6 +2,9 @@ import json
 import numpy as np
 
 class InstructionDataset():
+    """
+    this should be able to handle the split version and normal version, outputs should be identical to the normal version
+    """
     def __init__(self):
         self.datasets = {}
         self.labels = []
@@ -47,6 +50,7 @@ class InstructionDataset():
 
     def save(self):
         pass
+
 
 # Properties for dataset generation (creating views)
 # dataset (alpaca...): store one clean version of each

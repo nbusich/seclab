@@ -118,7 +118,9 @@ class DynamicZScore(PoisonDetector):
         ts = sorted(row.get("topics", []))
         return [(t,) for t in ts] if n == 1 else list(itertools.combinations(ts, n))
 
-    def _identify_topics(self, rows, min_topics=20, n_topics=10000, threshold=0.05):
+    # claude start: eval passes cached embeddings and a seeded UMAP
+    def _identify_topics(self, rows, min_topics=20, n_topics=10000, threshold=0.05, embeddings=None, umap_model=None):
+    # claude finish
         """
         Fit BERTopic on the instructions and store each row's topics on the row:
             row["topics"]       -> [topic name, ...] (most likely first)
@@ -135,8 +137,11 @@ class DynamicZScore(PoisonDetector):
             nr_topics=n_topics,
             vectorizer_model=CountVectorizer(stop_words="english"),  # cleaner topic words
             verbose=True,
+            # claude start: eval passes cached embeddings and a seeded UMAP
+            umap_model=umap_model,
         )
-        self.topic_model.fit(docs)
+        self.topic_model.fit(docs, embeddings)
+        # claude finish
 
         self.topics = self.topic_model.get_topic_info()
         print(self.topics.head(20)[["Topic", "Count", "Name"]])
@@ -208,7 +213,10 @@ class DynamicZScore(PoisonDetector):
         self.total = 0
         self.records = []
 
-        self._label_response(rows)
+        # claude start: eval attaches cached labels beforehand
+        if "generated_label" not in rows[0]:
+            self._label_response(rows)
+        # claude finish
         for row in rows:
             self.records.append(row) # store each dict in records
             sent = row["instruction"] # sent = value for key of output of each line
@@ -247,9 +255,13 @@ class DynamicZScore(PoisonDetector):
         self.total = 0
         self.records = []
 
-        self._label_response(rows)
-        self._identify_topics(rows)
-        print("TOPICS", self.topics)
+        # claude start: eval attaches cached labels and topics beforehand
+        if "generated_label" not in rows[0]:
+            self._label_response(rows)
+        if "topics" not in rows[0]:
+            self._identify_topics(rows)
+            print("TOPICS", self.topics)
+        # claude finish
 
         for row in rows:
             self.records.append(row)
